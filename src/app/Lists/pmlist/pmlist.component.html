@@ -1,0 +1,327 @@
+
+    <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Top Add start -->
+        <!-- ============================================================== -->
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+                <h4 class="text-themecolor">PM List</h4>
+            </div>
+            <div class="col-md-7 align-self-center text-right">
+                <div class="d-flex justify-content-end align-items-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Administration</a></li>
+                        <li class="breadcrumb-item active">PM List</li>
+                    </ol>
+                    <button (click)="changeView()" [ngStyle]="{'background-color':getColor()}" type="button" class="btn btnColor d-none d-lg-block m-l-15"><i class="fa iconColor fa-plus-circle mr-2"></i>{{btnCreate}}</button>
+                </div>
+            </div>  
+        </div>
+        <!-- ============================================================== -->
+        <!-- Top Add end -->
+        <!-- ============================================================== -->
+
+        <!-- ============================================================== -->
+        <!-- Start Add Page -->
+        <!-- ============================================================== -->
+
+        <div class="row" *ngIf="formsBool">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                      <h2 class="card-title">PM ADD</h2>
+                      <form>
+                        <div class="form-row">
+                          <div class="col-md-4  mb-3">
+                            <label for="validationServer01">Doctor Name</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="validationServer01"
+                              placeholder="First name"
+                              value="Mark"
+                              required
+                            />
+                            <div class="valid-feedback">Looks good!</div>
+                          </div>
+                
+                          <div class="col-md-4  mb-3">
+                            <label for="validationServer02">Tier</label>
+                
+                            <div>
+                              <select class="form-control" data-style="form-control ">
+                                <option>T-TOP </option>
+                                <option>T-MED </option>
+                                <option>T-LOW </option>
+                                <option>P-TOP </option>
+                                <option>P-MED </option>
+                                <option>P-LOW </option>
+                                
+                              </select>
+                            </div>
+                          </div>
+                
+                          <div class="col-md-4  mb-3">
+                            <label for="validationServer02">Speciality</label>
+                
+                            <div>
+                              <select class="form-control" data-style="form-control ">
+                                <option>Dermatology </option>
+                                <option>Plastic Surgery </option>
+                                <option>Pediatrics </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-row">
+                            <div class="col-md-4  mb-3">
+                              <label for="validationServer01">Email</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="validationServer01"
+                                placeholder="First name"
+                                value="Mark"
+                                required
+                              />
+                              <div class="valid-feedback">Looks good!</div>
+                            </div>
+                            <div class="col-md-4  mb-3">
+                                <label for="validationServer01">Personal Number</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="validationServer01"
+                                  placeholder="First name"
+                                  value="Mark"
+                                  required
+                                />
+                                <div class="valid-feedback">Looks good!</div>
+                              </div>
+                              <div class="col-md-4  mb-3">
+                                <label for="validationServer01">Day Of Birth</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="validationServer01"
+                                  placeholder="First name"
+                                  value="Mark"
+                                  required
+                                />
+                                <div class="valid-feedback">Looks good!</div>
+                              </div>
+                            </div>
+                            <hr>
+
+                            <div class="form-row">
+                                <div class="col-md-6  mb-3">
+                                  <label for="validationServer01">Clinic Number</label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="validationServer01"
+                                    placeholder="First name"
+                                    value="Mark"
+                                    required
+                                  />
+                                  <div class="valid-feedback">Looks good!</div>
+                                </div>
+                                <div class="col-md-6  mb-3">
+                                    <label for="validationServer01">Frequency</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="validationServer01"
+                                      placeholder="First name"
+                                      value="Mark"
+                                      required
+                                    />
+                                    <div class="valid-feedback">Looks good!</div>
+                                  </div>
+                                </div>
+                            
+                        <hr>
+                        <div class="form-row">
+                           
+                  
+                            <div class="col-md-4  mb-3">
+                              <label for="validationServer02">District*</label>
+                  
+                              <div>
+                                <select class="form-control" data-style="form-control ">
+                                  <option>Mustard</option>
+                                  <option>Ketchup</option>
+                                  <option>Relish</option>
+                                </select>
+                              </div>
+                            </div>
+                  
+                            <div class="col-md-4  mb-3">
+                              <label for="validationServer02">Area</label>
+                  
+                              <div>
+                                <select class="form-control" data-style="form-control ">
+                                  <option>Mustard</option>
+                                  <option>Ketchup</option>
+                                  <option>Relish</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <div class="col-md-4  mb-3">
+                                <label for="validationServer01">Brick</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="validationServer01"
+                                  placeholder="First name"
+                                  value="Mark"
+                                  required
+                                />
+                                <div class="valid-feedback">Looks good!</div>
+                              </div>
+                          </div>
+
+                          <div class="form-row">
+                          <div class="col-12 ">
+                            <label for="validationServer02">Address</label>
+                            
+                            <textarea class="form-control" ></textarea>
+                          </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-row">
+                                
+                            <div class="col-md-4  mb-3">
+                                <label for="validationServer01">Days Of Visit</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="validationServer01"
+                                  placeholder="First name"
+                                  value="Mark"
+                                  required
+                                />
+                                <div class="valid-feedback">Looks good!</div>
+                              </div>
+                              <div class="col-md-4  mb-3">
+                                <label for="validationServer01">Days Of Visit</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="validationServer01"
+                                  placeholder="First name"
+                                  value="Mark"
+                                  required
+                                />
+                                <div class="valid-feedback">Looks good!</div>
+                              </div>
+                            </div>
+                        
+                        <button class="btn btn-primary" type="submit" [ngStyle]="{'background-color':getColor()}">Submit form</button>
+                      </form>
+                    </div>
+                  </div>
+               
+            </div>
+        </div>
+
+         <!-- ============================================================== -->
+        <!-- End Add Page -->
+        <!-- ============================================================== -->
+
+         <!-- ============================================================== -->
+        <!-- Start List Page -->
+        <!-- ============================================================== -->
+
+        <div *ngIf="!formsBool">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">PM List</h2>
+                    <!-- <h6 class="card-subtitle">Add class <code>.color-table .danger-table</code></h6> -->
+                    <div class="table-responsive">
+                        <table class="table color-table ">
+                            <thead [ngStyle]="{'background-color':getColor()}">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Tier</th>
+                                    <th>Speciality</th>
+                                    <th>Personal Ph.</th>
+                                    <th>Clinic Ph.</th>
+                                    <th>Email</th>
+                                    <th>District</th>
+                                    <th>Area</th>
+                                    <th>Brick</th>
+                                    <th>Address</th>
+                                    <th>Frequency</th>
+                                    <th>MR</th>
+                                    <th>Edit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Nigam</td>
+                                    <td>Eichmann</td>
+                                    <td>@Sonu</td>
+                                    <td>Nigam</td>
+                                    <td>Eichmann</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td><button [ngStyle]="{'background-color':getColor()}" type="button" class="btn btnEdirColor"><i class="fas fa-pencil-alt"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Deshmukh</td>
+                                    <td>Prohaska</td>
+                                    <td>@Genelia</td>
+                                    <td>Nigam</td>
+                                    <td>Eichmann</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td><button [ngStyle]="{'background-color':getColor()}" type="button" class="btn btnEdirColor"><i class="fas fa-pencil-alt"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Roshan</td>
+                                    <td>Rogahn</td>
+                                    <td>@Hritik</td>
+                                    <td>Nigam</td>
+                                    <td>Eichmann</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>@Sonu</td>
+                                    <td>
+                                        <button [ngStyle]="{'background-color':getColor()}" type="button" class="btn btnEdirColor"><i class="fas fa-pencil-alt"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+         <!-- ============================================================== -->
+        <!-- Start Add Page -->
+        <!-- ============================================================== -->
+
+    </div>

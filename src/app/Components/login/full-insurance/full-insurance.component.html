@@ -1,0 +1,507 @@
+<!-- <app-header></app-header> -->
+
+<div class="mt-5 m-5 divheader">
+  <br>
+  <br>
+  <br>
+  <br>
+  <mat-horizontal-stepper linear #stepper dir='rtl' class="cc">
+    <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+    
+      <form class="divInput" [formGroup]="firstFormGroup" dir='rtl' >
+        <ng-template matStepLabel>معلومات مالك الوثيقة</ng-template>
+<div  class="flexheader" >
+        <h1 >الهويات المسجلة</h1>
+        
+
+      </div>
+      <hr>
+      
+
+        <div class="form-row">
+            <div class="col-md-6  mb-3">
+              <label for="validationServer01" class="font">اسم طالب التأمين</label>
+              <input
+              formControlName="Name"
+                type="text"
+                class="form-control"
+                id="validationServer01"
+                placeholder="First name"
+                value="Mark"
+                required
+              />
+
+              <div
+              *ngIf="
+                firstFormGroup.controls['Name'].invalid &&
+                (firstFormGroup.get('Name')?.dirty || firstFormGroup.get('Name')?.touched)
+              "
+            >
+            <br />
+              <small
+                *ngIf="firstFormGroup.controls['Name'].errors?.required"
+                class="alert alert-danger"
+                >Please Enter Your Name</small
+              >
+              <small
+                *ngIf="firstFormGroup.controls['Name'].errors?.minlength"
+                class="alert alert-danger"
+                >Please Enter Your Name</small
+              >
+              <br />
+            </div>        
+              </div>
+            <div class="col-md-6  mb-3">
+                <label for="validationServer01" class="font">البريد الالكترونى</label>
+                <input 
+                formControlName="Email"
+                  type="text"
+                  class="form-control"
+                  id="validationServer01"
+                  placeholder="First name"
+                  value="Mark"
+                  readonly
+                />
+                <div
+                *ngIf="
+                  firstFormGroup.controls['Email'].invalid &&
+                  (firstFormGroup.get('Email')?.dirty || firstFormGroup.get('Email')?.touched)
+                "
+              >
+              <br />
+                <small
+                  *ngIf="firstFormGroup.controls['Email'].errors?.required"
+                  class="alert alert-danger"
+                  >Please Enter Your Email</small
+                >
+                <small
+                  *ngIf="firstFormGroup.controls['Email'].hasError('email')"
+                  class="alert alert-danger"
+                  >example@example.com</small
+                >
+                <br />
+                <br />
+              </div>               </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-4  mb-3">
+                <label for="validationServer01" class="font">رقم الموبيل</label>
+                <input formControlName="Mobile"
+                  type="text"
+                  class="form-control"
+                  id="validationServer01"
+                  placeholder="First name"
+                  value="Mark"
+                  required
+                />
+                <div
+                *ngIf="
+                  firstFormGroup.controls['Mobile'].invalid &&
+                  (firstFormGroup.get('Mobile')?.dirty || firstFormGroup.get('Mobile')?.touched)
+                "
+              >
+              <br />
+                <small
+                  *ngIf="firstFormGroup.controls['Mobile'].errors?.required"
+                  class="alert alert-danger"
+                  >Please Enter Your Mobile</small
+                >
+                <small
+                  *ngIf="firstFormGroup.controls['Mobile'].errors?.minlength"
+                  class="alert alert-danger"
+                  >Please Enter Your Mobile</small
+                >
+                <br />
+                <br />
+              </div>
+              </div>
+    
+          
+            </div>
+            <div>
+              <button mat-button matStepperNext class="btn btn-lg btn-info" (click)="firstNext()">Next</button>
+            </div>
+      
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+     <form  class="divInput" dir='rtl'[formGroup]="secondFormGroup">
+      <ng-template matStepLabel>اضف مركبة</ng-template>
+      <div  class="flexheader" >
+              <h1 >اضف مركبة</h1>
+             
+      
+            </div>
+            <hr>
+           
+            <div class="form-row">
+              <div class="col-md-3 mb-3 form-group">
+                <label for="TourID" class="font">الرقم التسلسلى للمركبة</label>
+
+                <input type="text" formControlName="id" class="form-control" />
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label class="font" for="Title">نوع ناقل الحركة</label>
+                <select class="form-control" formControlName="Title" id="Title">
+                        
+                  <option>اوتوماتيك</option>
+                  <option>مانوال</option>
+               
+                </select>
+             
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label class="font" for="Date">الغرض من الاستخدام</label>
+                <select class="form-control" formControlName="Date" id="Date">
+                        
+                  <option>شخصى</option>
+                  <option>تأجير</option>
+                  <option>اخرى</option>
+               
+                </select>
+           
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label class="font" for="TourDistance">قيمة المركبة التقديرية</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="TourDistance"
+                  placeholder="Distance"
+                  formControlName="Section"
+                  [(ngModel)]="price"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-3 mb-3 form-group">
+                <label class="font" for="Image">سنة الصنع</label>
+                <input
+                type="text"
+                class="form-control"
+                id="Image"
+                placeholder="Distance"
+                formControlName="Image"
+              />
+               
+              
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label class="font" for="Rate">نوع المركبة</label>
+                <select class="form-control selectpicker" title="Select your surfboard" formControlName="Rate" id="Rate">
+               
+                  <option ><img src="../../../../assets/dre.png" width="50%" height="50%">Toyota</option>
+                  <option data-thumbnail="images/icon-chrome.png">Ford</option>
+                  <option data-thumbnail="images/icon-chrome.png">BMW</option>
+                  <option data-thumbnail="images/icon-chrome.png">Mercedes </option>
+                  <option data-thumbnail="images/icon-chrome.png">Nissan </option>
+                  <option data-thumbnail="../../../../assets/toy.jpg"> Kia</option>
+                 
+               
+                </select>
+              
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label class="font" for="Review">لون المركبة</label>
+                <input
+                type="text"
+                class="form-control"
+                id="Review"
+                placeholder="Distance"
+                formControlName="Review"
+              />
+              
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label class="font" for="TourBooked">رقم الشاصى للمركبة</label>
+
+                <input
+                  type="text"
+                  formControlName="Booked"
+                  class="form-control"
+                />
+              </div>
+            </div>
+<hr>
+          <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ person \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+            <div class="form-row">
+              <div class="col-md-3 mb-3 form-group">
+                <label class="font" for="Price">الحالة الاجتماعية</label>
+                <select class="form-control" formControlName="Price" id="Price">
+                        
+                  <option>اعزب</option>
+                  <option>متزوج</option>
+               
+                </select>
+              
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label class="font" for="TourOldPrice">المهنة</label>
+
+            
+                <select class="form-control" formControlName="OldPrice" id="OldPrice">
+                        
+                  <option>قطاع حكومى</option>
+                  <option>قطاع خاص</option>
+                  <option>اعمال حرة </option>
+                  <option>طالب </option>
+                  <option>لا يعمل </option>
+               
+                </select>
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label class="font" for="TourDiscount">نوع رخصة القيادة</label>
+                <select class="form-control" formControlName="TourDiscount" id="TourDiscount">
+                        
+                  <option>خاصة</option>
+                  <option>عامة</option>
+                  <option>أخرى</option>
+               
+                </select>
+               
+            
+            </div>
+
+            </div>
+              
+            <div class="w-50">
+              <!-- <button class="btn btn-danger mr-3" mat-button matStepperPrevious>Back</button> -->
+
+              <button  class="btn btn-info mr-3" (click)="scondform()" mat-button matStepperNext>Next</button>
+
+            </div>
+          </form>
+      <div>
+     
+      </div>
+    </mat-step>
+    <mat-step  [editable]="isEditable">
+      <ng-template class="ng-template" matStepLabel>Done</ng-template>
+      <form class="divInput2"  dir='rtl' >
+        <div  class="flexheader" >
+          <h1 >تاريخ بدء الوثيقة</h1>
+          
+        </div>
+        <hr>
+        <label class="font" >متى تريد أن يبدأ تاريخ سريان الوثيقة ؟</label>
+        <br>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="dateOfBirth" name="something">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+     <br>
+     <br>
+     <br>
+     <br>
+      <div>
+        <!-- <button mat-button matStepperPrevious class="btn btn-lg btn-danger mr-4">Back</button> -->
+        <button mat-button matStepperNext (click)="thirdform()" class="btn btn-lg btn-info mr-4">Next</button>
+      </div>
+    </form>
+    </mat-step>
+    <mat-step [editable]="isEditable">
+      <form class="divInput" [formGroup]="thirdFormGroup" dir='rtl' >
+        <ng-template matStepLabel>معلومات مالك الوثيقة</ng-template>
+<div  class="flexheader" >
+        <h1 >استكمل بيانات عنوانك الوطنى</h1>
+        
+
+      </div>
+      <hr>
+      
+
+        <div class="form-row">
+            <div class="col-md-6  mb-3">
+              <label for="validationServer01" class="font">رقم المبنى</label>
+              <input
+              formControlName="Name"
+                type="text"
+                class="form-control"
+                id="validationServer01"
+                placeholder="First name"
+                value="Mark"
+                required
+              />
+
+               
+              </div>
+            <div class="col-md-6  mb-3">
+                <label for="validationServer01" class="font">القضاء</label>
+                <input 
+                formControlName="Email"
+                  type="text"
+                  class="form-control"
+                  id="validationServer01"
+                  placeholder="First name"
+                  value="Mark"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-4  mb-3">
+                <label for="validationServer01" class="font">المحافظة</label>
+               
+                <select class="form-control" formControlName="Mobile" id="Date">
+                 
+                <option>أربيل</option>
+                <option>كربلاء</option>
+                <option>ذي قار</option>
+                <option>صلاح الدين</option>
+                <option>بابل</option>
+                <option>بغداد</option>
+                <option>البصرة</option>
+                <option>دهوك</option>
+                  <option>الأنبار</option>
+                  <option>النجف</option>
+                  <option>القادسية</option>
+                  <option>السليمانية</option>
+                  <option>واسط</option>
+                  <option>ميسان</option>
+                  <option>نينوى</option>
+                  <option>كركوك</option>
+                  <option>ديالى</option>
+                  <option>دهوك</option>
+                 
+               
+                </select>
+               
+              </div>
+    
+          
+            </div>
+            <div>
+        <!-- <button mat-button matStepperPrevious (click)="goBack(stepper)" class="btn btn-lg btn-danger mr-4">Back</button> -->
+
+              <button mat-button matStepperNext class="btn btn-lg btn-info" (click)="forthform()">Next</button>
+            </div>
+      
+      </form>
+    </mat-step>
+    <mat-step [editable]="isEditable">
+      <ng-template matStepLabel>الشركات</ng-template>
+      <div  class="flexheader" >
+              <h1 >اختيار الشركة </h1>
+              
+            </div>
+        <div  class="content">
+
+          <div class="container-fluid">
+            <div class="row">
+              <div *ngFor="let c of Cards" class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                  <div class="card-header {{c.ColorBck}} card-header-icon">
+                    <div class="card-icon">
+                      <!-- <i class="material-icons">globe-americas</i> -->
+                      <!-- <i class="{{c.Icon}}"></i> -->
+                      <img src="{{c.Icon}}">
+                      <!-- <i class="fas fa-hotel material-icons"></i> -->
+                    </div>
+                    <p class="card-category">{{c.title}}</p>
+                    <h3 class="card-title"> ${{c.NoDocument}}
+                      <!-- <small>GB</small> -->
+                    </h3>
+                  </div>
+                  <div class="card-footer">
+                    <div class="stats">
+                      <button mat-button matStepperNext class="ml-4 btn btn-lg btn-success" (click)="addInfo(c.NoDocument,c.Icon,c.title)" >اختيار</button>
+      
+                    </div>
+                  </div>
+                </div>
+              </div>
+             
+      
+            </div>
+          
+            
+          </div>
+        </div>
+      
+      <div>
+        <!-- <button mat-button matStepperPrevious>Back</button> -->
+        <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
+      </div>
+    </mat-step>
+
+    <mat-step [editable]="isEditable">
+      <ng-template matStepLabel>فاتورة</ng-template>
+      <div class="divInput" dir="rtl">
+      <div  class="flexheader" >
+              <h1 class="bckfont" >شكرا لاختيارك عرض السعر لمركبتك</h1>
+               </div>
+               <hr>
+        <div id="print-section" class="">
+<h2>الرجاء الاطلاع على تفاصيل فاتورة السداد</h2>
+<div class="flexdiv">
+  <h3 class="boldfont">اسم الفاتورة</h3>
+  <h3 class="mr-5">تامينى</h3>
+
+</div>
+<div class="flexdiv">
+  <h3 class="boldfont">رقم الفاتورة</h3>
+  <h3 class="mr-5">{{random}}</h3>
+
+</div><div class="flexdiv">
+  <h3 class="boldfont">قيمة الوثيقة</h3>
+  <h3 class="mr-5">${{item.NoDocument}}</h3>
+
+</div>
+
+<h2>معلومات المالك والمركبة</h2>
+<hr>
+         
+<div class="flexdiv">
+  <div>
+  <div class="flexdiv">
+  <h3 class="boldfont">تاريخ البدء</h3>
+  <h3 class="mr-5">{{today| date :'mediumDate'}}</h3>
+
+</div>
+
+<div class="flexdiv">
+  <h3 class="boldfont">تاريخ الانتهاء</h3>
+  <h3 class="mr-5">{{dateOfBirth| date :'mediumDate'}}</h3>
+
+</div>
+
+<div class="flexdiv">
+  <h3 class="boldfont">مالك الوثيقة</h3>
+  <h3 class="mr-5">{{item.Email}}</h3>
+
+</div>
+</div>
+<div class="mr-5">
+  <div class="flexdiv">
+  <h3 class="boldfont">الرقم التسلسلى</h3>
+  <h3 class="mr-5">{{item.serialNumber}}</h3>
+
+</div>
+
+<div class="flexdiv">
+  <h3 class="boldfont">لون المركبة</h3>
+  <h3 class="mr-5">{{item.carType}}</h3>
+
+</div>
+
+
+</div>
+</div>
+
+
+
+        </div>
+      
+      
+      <div>
+        <button class="btn btn-lg btn-danger " printSectionId="print-section" ngxPrint >Print</button>
+
+        <!-- <button mat-button matStepperPrevious>Back</button> -->
+        <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
+      </div>
+    </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+  
+</div>

@@ -1,0 +1,105 @@
+<div class="divAll row">
+  <div class="col-8 col-sm-12 col-md-6 col-lg-8 col-xs-12">
+    <h1>إنشاء حساب جديد</h1>
+    <br />
+    <div class="divInput">
+      <form [formGroup]="userInfo">
+        <div class="form-group">
+          <label class="font">الايميل</label>
+          <input type="email" class="form-control" formControlName="Email" />
+        </div>
+        <div
+          *ngIf="
+            userInfo.controls['Email'].invalid &&
+            (userInfo.get('Email')?.dirty || userInfo.get('Email')?.touched)
+          "
+        >
+          <small
+            *ngIf="userInfo.controls['Email'].errors?.required"
+            class="alert alert-danger"
+            >Please Enter Your Email</small
+          >
+          <small
+            *ngIf="userInfo.controls['Email'].hasError('email')"
+            class="alert alert-danger"
+            >example@example.com</small
+          >
+          <br />
+          <br />
+        </div>
+
+        <div class="form-group">
+          <label class="font">رقم الموبيل</label>
+          <input type="tel" class="form-control" formControlName="mobile" />
+        </div>
+        <div
+          *ngIf="
+            userInfo.controls['mobile'].invalid &&
+            (userInfo.get('mobile')?.dirty || userInfo.get('mobile')?.touched)
+          "
+        >
+          <small
+            *ngIf="userInfo.controls['mobile'].errors?.required"
+            class="alert alert-danger"
+            >Please Enter Your Mobile</small
+          >
+          <!-- <small *ngIf="userInfo.controls['mobile'].errors?.minlength" class="alert alert-danger">your mobile must be 12</small> -->
+          <small
+            *ngIf="userInfo.controls['mobile'].errors?.minlength"
+            class="alert alert-danger"
+            >your Mobile must be 12</small
+          >
+
+          <small
+            *ngIf="userInfo.controls['mobile'].errors?.maxlength"
+            class="alert alert-danger"
+            >your Mobile must be 12</small
+          >
+          <br />
+          <br />
+        </div>
+
+        <div class="form-group">
+          <label class="font">كلمة السر</label>
+          <input
+            type="Password"
+            class="form-control"
+            formControlName="Password"
+          />
+        </div>
+        <div
+          *ngIf="
+            userInfo.controls['Password'].invalid &&
+            (userInfo.get('Password')?.dirty ||
+              userInfo.get('Password')?.touched)
+          "
+        >
+          <small
+            *ngIf="userInfo.controls['Password'].errors?.required"
+            class="alert alert-danger"
+            >Please Enter Your Password</small
+          >
+          <small
+            *ngIf="userInfo.controls['Password'].errors?.minlength"
+            class="alert alert-danger"
+            >your password must be 5</small
+          >
+          <br />
+          <br />
+        </div>
+        <div class="btndiv">
+            
+        <input type="submit" value="SignUp" class="btn btn-info btn-lg" (click)="onNoClick()" />
+        <div class="divacc">
+            <a (click)="hasacc()">لديك حساب</a>
+        </div>
+    </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ////////////////////////////////// div2////////////////// -->
+  <div class=" d-inline d-lg-inline d-md-inline col-4 col-sm-0 col-md-6 col-lg-4 col-xs-0 d-sm-none d-xs-none divSecond ">
+    <img src="../../../../assets/comp.png" class="w-100 d-xs-none imgg" />
+  </div>
+</div>

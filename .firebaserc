@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "klooktest-520cb": {
+      "hosting": {
+        "myapp": [
+          "klooktest-520cb"
+        ]
+      }
+    }
+  }
+}

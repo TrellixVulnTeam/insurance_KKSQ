@@ -1,0 +1,56 @@
+.divAll{
+
+    // direction: rtl;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: nowrap;
+background-color: rgb(246, 246, 246);
+}
+
+.divSecond{
+    background-color:rgb(246, 246, 246);
+}
+
+h1{
+    margin: auto;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+.divInput{
+    direction: rtl;
+    text-align: right!important;
+
+
+     display: flex;
+    flex-direction: column;
+    // flex-wrap: nowrap;
+}
+
+.font{
+
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(100, 93, 93);
+}
+
+.imgg{
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+.btndiv{
+     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.divacc{
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: 400;
+    margin-top: 8px;
+}

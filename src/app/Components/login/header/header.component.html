@@ -1,0 +1,92 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#">
+        <img
+          src="../../../../assets/fp.JPG"
+          width="30"
+          height="30"
+          class="d-inline-block align-top"
+          alt=""
+        />
+      </a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mr-5">
+        <li class="nav-item ">
+          <a *ngIf="isuser" class="nav-link fontlink" (click)="openDialog()"
+            > Login </a
+          >
+          <a *ngIf="!isuser" class="nav-link fontlink" (click)="Logout()"
+            > Logout </a
+          >
+        </li>
+      
+      </ul>
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-5">
+        <li class="nav-item ">
+          <a class="nav-link fontlink" routerLinkActive="active" routerLink="/home"
+            >Home </a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fontlink" routerLinkActive="active" routerLink="/full" >Full Insurance</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fontlink " routerLinkActive="active" routerLink="/third" >Third-Party Insurance</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fontlink " href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fontlink " href="#">About</a>
+        </li>
+      </ul>
+    
+    </div>
+  </nav>
+  
+<!-- 
+   <div class="sidebar">
+    <a class="active" routerLinkActive="active" routerLink="/full">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div> -->
+<!--  
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<nav class="navbar navbar-inverse sidebar" role="navigation">
+  <div class="container-fluid">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Brand</a>
+  </div>
+  <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+      <li ><a href="#">Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+      <li ><a href="#">Messages<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
+    
+    </ul>
+  </div>
+</div>
+</nav>
+<div class="main">
+</div>  -->
