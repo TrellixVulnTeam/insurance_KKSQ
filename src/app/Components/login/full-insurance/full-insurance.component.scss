@@ -294,6 +294,12 @@ option{
     flex-wrap: nowrap;
     // justify-content:flex-start;
   }
+  .flexdiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // justify-content:flex-start;
+  }
 
   .boldfont{
     font-weight: bold;

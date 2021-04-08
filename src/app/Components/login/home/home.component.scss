@@ -18,19 +18,52 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  // width: 100%;
+  width: 100% !important;
   // height: 300px;
   margin: 20% 30%;
   text-align: center;
   // justify-content: space-between;
 }
-.WelcomeText h1 {
-  margin-bottom: 60%;
-  color: burlywood;
-  text-transform: uppercase;
-  font-size: 60px;
+
+
+
+.pp{
+  position: absolute;
+  // width: 100%;
+  // height: 300px;
+  margin: 1% 57%;
+  // 102% 19
+  text-align: center;
+  margin-bottom: 60px !important;
+
 }
 
+h1{
+  width: 100%;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+h3{
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+h2{
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .pp{
+   
+    margin: 67% 1%;
+}
+}
 .mm{
   margin-bottom: 20px !important;
 }
@@ -46,8 +79,4 @@ header {
   background-size: cover;
   background-position: center center;
   position: relative;
-}
-
-.btnn{
-  // height: ;
 }

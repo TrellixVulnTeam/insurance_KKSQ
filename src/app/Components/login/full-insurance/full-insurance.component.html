@@ -6,7 +6,7 @@
   <br>
   <br>
   <mat-horizontal-stepper linear #stepper dir='rtl' class="cc">
-    <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+    <mat-step [stepControl]="firstFormGroup" >
     
       <form class="divInput" [formGroup]="firstFormGroup" dir='rtl' >
         <ng-template matStepLabel>معلومات مالك الوثيقة</ng-template>
@@ -26,7 +26,7 @@
                 type="text"
                 class="form-control"
                 id="validationServer01"
-                placeholder="First name"
+                
                 value="Mark"
                 required
               />
@@ -58,9 +58,9 @@
                   type="text"
                   class="form-control"
                   id="validationServer01"
-                  placeholder="First name"
-                  value="Mark"
-                  readonly
+                  
+                  value="Name"
+                  
                 />
                 <div
                 *ngIf="
@@ -90,7 +90,7 @@
                   type="text"
                   class="form-control"
                   id="validationServer01"
-                  placeholder="First name"
+                  
                   value="Mark"
                   required
                 />
@@ -120,11 +120,13 @@
             </div>
             <div>
               <button mat-button matStepperNext class="btn btn-lg btn-info" (click)="firstNext()">Next</button>
+              <button mat-button  class="btn btn-lg btn-primary mr-4" (click)="resetform(firstFormGroup)">Reset</button>
+              
             </div>
       
       </form>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+              <mat-step [stepControl]="secondFormGroup" >
      <form  class="divInput" dir='rtl'[formGroup]="secondFormGroup">
       <ng-template matStepLabel>اضف مركبة</ng-template>
       <div  class="flexheader" >
@@ -145,7 +147,7 @@
                 <select class="form-control" formControlName="Title" id="Title">
                         
                   <option>اوتوماتيك</option>
-                  <option>مانوال</option>
+                  <option>يدوى</option>
                
                 </select>
              
@@ -168,7 +170,7 @@
                   type="text"
                   class="form-control"
                   id="TourDistance"
-                  placeholder="Distance"
+                  
                   formControlName="Section"
                   [(ngModel)]="price"
                 />
@@ -182,8 +184,9 @@
                 type="text"
                 class="form-control"
                 id="Image"
-                placeholder="Distance"
+                
                 formControlName="Image"
+                [(ngModel)]="yearof"
               />
                
               
@@ -209,7 +212,7 @@
                 type="text"
                 class="form-control"
                 id="Review"
-                placeholder="Distance"
+                
                 formControlName="Review"
               />
               
@@ -247,6 +250,7 @@
                   <option>قطاع خاص</option>
                   <option>اعمال حرة </option>
                   <option>طالب </option>
+                  <option>كاسب </option>
                   <option>لا يعمل </option>
                
                 </select>
@@ -267,9 +271,11 @@
             </div>
               
             <div class="w-50">
-              <!-- <button class="btn btn-danger mr-3" mat-button matStepperPrevious>Back</button> -->
+              <button class="btn btn-lg btn-danger mr-3" mat-button matStepperPrevious>Back</button>
 
-              <button  class="btn btn-info mr-3" (click)="scondform()" mat-button matStepperNext>Next</button>
+              <button  class="btn btn-lg btn-info mr-3" (click)="scondform()" mat-button matStepperNext>Next</button>
+              <button mat-button  class="btn btn-lg btn-primary mr-4" (click)="resetform(secondFormGroup)">Reset</button>
+
 
             </div>
           </form>
@@ -277,49 +283,69 @@
      
       </div>
     </mat-step>
-    <mat-step  [editable]="isEditable">
+    <mat-step  >
       <ng-template class="ng-template" matStepLabel>Done</ng-template>
-      <form class="divInput2"  dir='rtl' >
+      <form class="divInput2"  dir='rtl' [formGroup]="forthFormGroup" >
         <div  class="flexheader" >
           <h1 >تاريخ بدء الوثيقة</h1>
           
         </div>
         <hr>
+        <div   class="flexdiv2">
         <label class="font" >متى تريد أن يبدأ تاريخ سريان الوثيقة ؟</label>
         <br>
-        <input matInput [matDatepicker]="picker" [(ngModel)]="dateOfBirth" name="something">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
+       
+        <!-- <input type="date" [(ngModel)]="age" /> -->
+        
+        <input type="date" class="form-control w-25" formControlName="date" [(ngModel)]="dateOfBirth" name="something">
+        <!-- <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker> -->
      <br>
      <br>
+     <br>
+    
+     <label class="font" >{{showAge  | date:'yyyy-MM-dd'}}</label>
+     <div class="col-md-3 mb-3 form-group">
+      <label class="font" for="Title">اختيار عدد السنين</label>
+      <select class="form-control" formControlName="calender" [(ngModel)]="noyear" id="Title">
+              
+        <option>سنة</option>
+        <option>سنتين</option>
+        <option>3 سنوات</option>
+        <option>4 سنوات</option>
+     
+      </select>
+    </div>
+    </div>
+
      <br>
      <br>
       <div>
-        <!-- <button mat-button matStepperPrevious class="btn btn-lg btn-danger mr-4">Back</button> -->
+        <!-- <button  (click)="datee()" class="btn btn-lg btn-info mr-4">date</button> -->
+        
+        <button mat-button matStepperPrevious class="btn btn-lg btn-danger mr-4">Back</button>
         <button mat-button matStepperNext (click)="thirdform()" class="btn btn-lg btn-info mr-4">Next</button>
+        <button mat-button  class="btn btn-lg btn-primary mr-4" (click)="resetform(forthFormGroup)">Reset</button>
+
       </div>
     </form>
     </mat-step>
-    <mat-step [editable]="isEditable">
+    <mat-step >
       <form class="divInput" [formGroup]="thirdFormGroup" dir='rtl' >
         <ng-template matStepLabel>معلومات مالك الوثيقة</ng-template>
 <div  class="flexheader" >
         <h1 >استكمل بيانات عنوانك الوطنى</h1>
-        
-
       </div>
       <hr>
-      
-
         <div class="form-row">
             <div class="col-md-6  mb-3">
-              <label for="validationServer01" class="font">رقم المبنى</label>
+              <label for="validationServer01" class="font">رقم الدار</label>
               <input
               formControlName="Name"
                 type="text"
                 class="form-control"
                 id="validationServer01"
-                placeholder="First name"
+                
                 value="Mark"
                 required
               />
@@ -333,7 +359,7 @@
                   type="text"
                   class="form-control"
                   id="validationServer01"
-                  placeholder="First name"
+                  
                   value="Mark"
                   required
                 />
@@ -372,14 +398,16 @@
           
             </div>
             <div>
-        <!-- <button mat-button matStepperPrevious (click)="goBack(stepper)" class="btn btn-lg btn-danger mr-4">Back</button> -->
+              <button class="btn btn-lg btn-danger mr-3" mat-button matStepperPrevious>Back</button>
 
-              <button mat-button matStepperNext class="btn btn-lg btn-info" (click)="forthform()">Next</button>
+              <button mat-button matStepperNext class="btn btn-lg btn-info mr-4" (click)="forthform()">Next</button>
+        <button mat-button  class="btn btn-lg btn-primary mr-4" (click)="resetform(thirdFormGroup)">Reset</button>
+
             </div>
       
       </form>
     </mat-step>
-    <mat-step [editable]="isEditable">
+    <mat-step >
       <ng-template matStepLabel>الشركات</ng-template>
       <div  class="flexheader" >
               <h1 >اختيار الشركة </h1>
@@ -399,13 +427,14 @@
                       <!-- <i class="fas fa-hotel material-icons"></i> -->
                     </div>
                     <p class="card-category">{{c.title}}</p>
-                    <h3 class="card-title"> ${{c.NoDocument}}
+                    <h3 class="card-title"> ${{c.NoDocument | number: '1.0-0'}}
                       <!-- <small>GB</small> -->
                     </h3>
                   </div>
                   <div class="card-footer">
                     <div class="stats">
                       <button mat-button matStepperNext class="ml-4 btn btn-lg btn-success" (click)="addInfo(c.NoDocument,c.Icon,c.title)" >اختيار</button>
+                      <!-- <button mat-button  class="btn btn-lg btn-primary mr-4" (click)="resetform(thirdFormGroup)">Reset</button> -->
       
                     </div>
                   </div>
@@ -420,12 +449,13 @@
         </div>
       
       <div>
-        <!-- <button mat-button matStepperPrevious>Back</button> -->
+        <button class="btn btn-lg btn-danger" mat-button matStepperPrevious>Back</button>
+
         <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
       </div>
     </mat-step>
 
-    <mat-step [editable]="isEditable">
+    <mat-step >
       <ng-template matStepLabel>فاتورة</ng-template>
       <div class="divInput" dir="rtl">
       <div  class="flexheader" >
@@ -434,6 +464,11 @@
                <hr>
         <div id="print-section" class="">
 <h2>الرجاء الاطلاع على تفاصيل فاتورة السداد</h2>
+<div class="flexdiv">
+  <h3 class="boldfont">نوع التامين</h3>
+  <h3 class="mr-5">{{item.insurancetype}}</h3>
+
+</div>
 <div class="flexdiv">
   <h3 class="boldfont">اسم الفاتورة</h3>
   <h3 class="mr-5">تامينى</h3>
@@ -456,13 +491,13 @@
   <div>
   <div class="flexdiv">
   <h3 class="boldfont">تاريخ البدء</h3>
-  <h3 class="mr-5">{{today| date :'mediumDate'}}</h3>
+  <h3 class="mr-5">{{dateOfBirth| date :'mediumDate'}}</h3>
 
 </div>
 
 <div class="flexdiv">
   <h3 class="boldfont">تاريخ الانتهاء</h3>
-  <h3 class="mr-5">{{dateOfBirth| date :'mediumDate'}}</h3>
+  <h3 class="mr-5">{{showAge| date :'mediumDate'}}</h3>
 
 </div>
 
@@ -495,9 +530,9 @@
       
       
       <div>
-        <button class="btn btn-lg btn-danger " printSectionId="print-section" ngxPrint >Print</button>
+        <button class="btn btn-lg btn-success " printSectionId="print-section" ngxPrint >Print</button>
 
-        <!-- <button mat-button matStepperPrevious>Back</button> -->
+        <button class="btn btn-lg btn-danger mr-4" mat-button matStepperPrevious>Back</button>
         <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
       </div>
     </div>
