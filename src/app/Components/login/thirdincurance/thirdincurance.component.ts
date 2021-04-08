@@ -6,6 +6,7 @@ import { InfoDialogComponent } from 'src/app/info-dialog/info-dialog.component';
 import { AddInsuranceService } from 'src/app/services/add-insurance.service';
 import { Firstform } from 'src/app/ViewModals/firstform';
 import { Form2 } from 'src/app/ViewModals/form2';
+import { Forthform } from 'src/app/ViewModals/forthform';
 import { ICardsDash } from 'src/app/ViewModals/icards-dash';
 import { InfoInsurance } from 'src/app/ViewModals/info-insurance';
 import { Secondform } from 'src/app/ViewModals/secondform';
