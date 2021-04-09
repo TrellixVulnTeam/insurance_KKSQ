@@ -41,48 +41,46 @@ listadd: Form2 = {Section:''}
 listaddthird: Secondform = {}
 listaddfirst: Firstform = {}
 listaddforth: Forthform = {}
-
+ 
 
 today: number = Date.now();
 random:number= Math.floor((Math.random() * 100000000) + 1);
 
+constructor(private _formBuilder: FormBuilder,public dialog: MatDialog,private insSer:AddInsuranceService) {
+  this.firstFormGroup = this._formBuilder.group({
+    Email: new FormControl(localStorage.getItem("currentUserEmail"), [Validators.required,Validators.email]),
+    Name: new FormControl('', [Validators.required,Validators.minLength(5)]),
+    Mobile: new FormControl('', [Validators.required,Validators.minLength(5)]),
+  });
+  this.secondFormGroup = this._formBuilder.group({
+ 
+    id:new FormControl('', Validators.required),
+      Booked:new FormControl('', Validators.required),
+      Date:new FormControl('', Validators.required)
+      ,Image:new FormControl('', Validators.required)
+      ,OldPrice:new FormControl('', Validators.required)
+      ,Price:new FormControl('', Validators.required)
+      ,Rate:new FormControl('', Validators.required)
+      ,Review:new FormControl('', Validators.required)
+      ,Section:new FormControl('', Validators.required)
+      ,Title:new FormControl('', Validators.required)
+      ,TourDiscount:new FormControl('', Validators.required)
 
-  constructor(private _formBuilder: FormBuilder,public dialog: MatDialog,private insSer:AddInsuranceService) {
-    this.firstFormGroup = this._formBuilder.group({
-      Email: new FormControl(localStorage.getItem("currentUserEmail"), [Validators.required,Validators.email]),
-      Name: new FormControl('يياحمد', [Validators.required,Validators.minLength(5)]),
-      Mobile: new FormControl('123456789123', [Validators.required,Validators.minLength(5)]),
+
+
     });
-    this.secondFormGroup = this._formBuilder.group({
-   
-      id:new FormControl('vbfdd', Validators.required),
-        Booked:new FormControl('احمد', Validators.required),
-        Date:new FormControl('احمد', Validators.required)
-        ,Image:new FormControl('احمد', Validators.required)
-        ,OldPrice:new FormControl('احمد', Validators.required)
-        ,Price:new FormControl('احمد', Validators.required)
-        ,Rate:new FormControl('احمد', Validators.required)
-        ,Review:new FormControl('احمد', Validators.required)
-        ,Section:new FormControl('50000', Validators.required)
-        ,Title:new FormControl('احمد', Validators.required)
-        ,TourDiscount:new FormControl('احمد', Validators.required)
-  
-  
-  
-      });
-      this.thirdFormGroup = this._formBuilder.group({
-        Email: new FormControl('d@gd', [Validators.required,Validators.email]),
-        Name: new FormControl('يياحمد', [Validators.required,Validators.minLength(5)]),
-        Mobile: new FormControl('123456789123', Validators.required),
-      });
+    this.thirdFormGroup = this._formBuilder.group({
+      Email: new FormControl('', [Validators.required,Validators.email]),
+      Name: new FormControl('', [Validators.required,Validators.minLength(5)]),
+      Mobile: new FormControl('', Validators.required),
+    });
 
-      this.forthFormGroup = this._formBuilder.group({
-       
-        calender: new FormControl('123456789123', Validators.required),
-        date: new FormControl('123456789123', Validators.required)
-      });
-    }
-
+    this.forthFormGroup = this._formBuilder.group({
+     
+      calender: new FormControl('', Validators.required),
+      date: new FormControl('', Validators.required)
+    });
+  }
   ngOnInit() { 
   }
 
@@ -109,6 +107,7 @@ random:number= Math.floor((Math.random() * 100000000) + 1);
 
     console.log(this.dateOfBirth)
     this.datee()
+    console.log(this.showAge)
     this.Cards=[
       {
       title:"شركة الانماء طوكيو",
@@ -212,15 +211,16 @@ datee(){
 
   
   
-  this.showAge2=this.showAge
+  // this.showAge2=this.showAge
 
   
 
   if(this.listaddforth.calender=='سنة' ){
     console.log('1yer')
     
-   this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+   this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*1)));
    this.showAge2=this.showAge
+   console.log(this.showAge)
    
   this.price1= this.price*0.3
    this.price2=this.price*0.3
@@ -237,8 +237,9 @@ datee(){
   else if(this.listaddforth.calender=='سنتين' ){
     console.log('2yer')
     
-    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*2)));
     this.showAge2=this.showAge
+    console.log(this.showAge)
      
   this.price1= this.price*0.3
   this.price2=this.price*0.4
@@ -251,9 +252,10 @@ datee(){
  
    }
    else if(this.listaddforth.calender=='3 سنوات' ){
-    console.log('2yer')
+    // console.log('2yer')
+    console.log(this.showAge)
     
-    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*3)));
     this.showAge2=this.showAge
      
   this.price1= this.price*0.4
@@ -268,6 +270,7 @@ datee(){
    }
    else if(this.listaddforth.calender=='4 سنوات' ){
     console.log('4yer')
+    console.log(this.showAge)
     
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
     this.showAge2=this.showAge
@@ -288,8 +291,8 @@ datee(){
 
   if(this.price<=50000 ){
     console.log('5000<')
-    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
-    this.showAge2=this.showAge
+    // this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+    // this.showAge2=this.showAge
     
    this.price1= this.price1*0.9
     this.price2=this.price2*0.7
@@ -305,11 +308,9 @@ datee(){
    else if(this.price>=50000 ){
     console.log('5000>')
      
-     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
-     this.showAge2=this.showAge
-      
-  
-    
+    //  this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+    //  this.showAge2=this.showAge
+        
   this.price1= this.price1*0.08
   this.price2=this.price2*0.3
  this.price3=this.price3*0.09
@@ -320,16 +321,12 @@ datee(){
  console.log("price3",this.price3)
  console.log("price4",this.price4)
     }
-   else{
-    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*2)));
-    this.showAge2=this.showAge
- 
-   }
+  
 
    if(this.yearof<=2000 ){
     console.log('5000<')
-    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
-    this.showAge2=this.showAge
+    // this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+    // this.showAge2=this.showAge
     
    this.price1= this.price1*0.9
     this.price2=this.price2*0.9
@@ -343,10 +340,10 @@ datee(){
    }
  
    else if(this.yearof>2000 && this.yearof<=2018 ){
-    console.log('5000>')
+    // console.log('5000>')
      
-     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
-     this.showAge2=this.showAge
+    //  this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+    //  this.showAge2=this.showAge
       
   
     
@@ -362,10 +359,10 @@ datee(){
     }
 
     else if(this.yearof>2000 && this.yearof<=2018 ){
-      console.log('5000>')
+      // console.log('5000>')
        
-       this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
-       this.showAge2=this.showAge
+      //  this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+      //  this.showAge2=this.showAge
         
     
       

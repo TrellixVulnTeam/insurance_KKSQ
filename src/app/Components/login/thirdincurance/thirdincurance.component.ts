@@ -41,7 +41,7 @@ listadd: Form2 = {Section:''}
 listaddthird: Secondform = {}
 listaddfirst: Firstform = {}
 listaddforth: Forthform = {}
-
+ 
 
 today: number = Date.now();
 random:number= Math.floor((Math.random() * 100000000) + 1);
@@ -191,7 +191,7 @@ this.item.elmohafza=this.listaddthird.Mobile
 this.item.date=this.dateOfBirth
 this.item.currentdate=this.today.toString()
 
-this.item.insurancetype="تأمين شامل"
+this.item.insurancetype="تأمين ضد الغير"
 console.log(this.item)
 
   this.insSer.addInsurance(this.item)
@@ -219,7 +219,7 @@ datee(){
   if(this.listaddforth.calender=='سنة' ){
     console.log('1yer')
     
-   this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+   this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*1)));
    this.showAge2=this.showAge
    
   this.price1= this.price*0.3
@@ -237,7 +237,7 @@ datee(){
   else if(this.listaddforth.calender=='سنتين' ){
     console.log('2yer')
     
-    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*2)));
     this.showAge2=this.showAge
      
   this.price1= this.price*0.3
@@ -253,7 +253,7 @@ datee(){
    else if(this.listaddforth.calender=='3 سنوات' ){
     console.log('2yer')
     
-    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*3)));
     this.showAge2=this.showAge
      
   this.price1= this.price*0.4
@@ -288,8 +288,8 @@ datee(){
 
   if(this.price<=50000 ){
     console.log('5000<')
-    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
-    this.showAge2=this.showAge
+    // this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+    // this.showAge2=this.showAge
     
    this.price1= this.price1*0.9
     this.price2=this.price2*0.7
@@ -305,11 +305,9 @@ datee(){
    else if(this.price>=50000 ){
     console.log('5000>')
      
-     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
-     this.showAge2=this.showAge
-      
-  
-    
+    //  this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+    //  this.showAge2=this.showAge
+        
   this.price1= this.price1*0.08
   this.price2=this.price2*0.3
  this.price3=this.price3*0.09
@@ -320,16 +318,12 @@ datee(){
  console.log("price3",this.price3)
  console.log("price4",this.price4)
     }
-   else{
-    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*2)));
-    this.showAge2=this.showAge
- 
-   }
+  
 
    if(this.yearof<=2000 ){
     console.log('5000<')
-    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
-    this.showAge2=this.showAge
+    // this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+    // this.showAge2=this.showAge
     
    this.price1= this.price1*0.9
     this.price2=this.price2*0.9
@@ -343,10 +337,10 @@ datee(){
    }
  
    else if(this.yearof>2000 && this.yearof<=2018 ){
-    console.log('5000>')
+    // console.log('5000>')
      
-     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
-     this.showAge2=this.showAge
+    //  this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+    //  this.showAge2=this.showAge
       
   
     
@@ -362,10 +356,10 @@ datee(){
     }
 
     else if(this.yearof>2000 && this.yearof<=2018 ){
-      console.log('5000>')
+      // console.log('5000>')
        
-       this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
-       this.showAge2=this.showAge
+      //  this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
+      //  this.showAge2=this.showAge
         
     
       

@@ -61,7 +61,15 @@ h2{
 @media (max-width: 768px) {
   .pp{
    
-    margin: 67% 1%;
+    margin: 82% 1%;
+}
+
+h1{
+  font-size: 22px;
+}
+
+h2{
+  font-size: 18px;
 }
 }
 .mm{
@@ -70,6 +78,11 @@ h2{
 
 button{
   width: 200px;
+  height: 70px;
+  font-size: 20px;
+  font-weight: bold;
+
+
 }
 
 header {
