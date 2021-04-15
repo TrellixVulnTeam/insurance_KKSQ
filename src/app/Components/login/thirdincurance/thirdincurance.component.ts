@@ -76,38 +76,38 @@ yeararr:any[]=[]
   constructor(private _formBuilder: FormBuilder,public dialog: MatDialog,private insSer:AddInsuranceService) {
     this.firstFormGroup = this._formBuilder.group({
       Email: new FormControl(localStorage.getItem("currentUserEmail"), [Validators.required,Validators.email]),
-      Name: new FormControl('', [Validators.required,Validators.minLength(5)]),
-      Mobile: new FormControl('', [Validators.required,Validators.minLength(5)]),
+      Name: new FormControl('يياحمد', [Validators.required,Validators.minLength(5)]),
+      Mobile: new FormControl('123456789123', [Validators.required,Validators.minLength(5)]),
     });
     this.secondFormGroup = this._formBuilder.group({
    
-      id:new FormControl('', Validators.required),
-        Booked:new FormControl('', Validators.required),
-        Date:new FormControl('', Validators.required)
-        ,Image:new FormControl('', Validators.required)
-        ,OldPrice:new FormControl('', Validators.required)
-        ,Price:new FormControl('', Validators.required)
-        ,Rate:new FormControl('', Validators.required)
-        ,Review:new FormControl('', Validators.required)
-        ,Section:new FormControl('', Validators.required)
-        ,Title:new FormControl('', Validators.required)
-        ,TourDiscount:new FormControl('', Validators.required)
-        ,noChiled:new FormControl('')
-        ,gender:new FormControl('', Validators.required)
+      id:new FormControl('vbfdd', Validators.required),
+        Booked:new FormControl('احمد', Validators.required),
+        Date:new FormControl('احمد', Validators.required)
+        ,Image:new FormControl('احمد', Validators.required)
+        ,OldPrice:new FormControl('احمد', Validators.required)
+        ,Price:new FormControl('احمد', Validators.required)
+        ,Rate:new FormControl('احمد', Validators.required)
+        ,Review:new FormControl('احمد', Validators.required)
+        ,Section:new FormControl('50000', Validators.required)
+        ,Title:new FormControl('احمد', Validators.required)
+        ,TourDiscount:new FormControl('احمد', Validators.required)
+        ,noChiled:new FormControl('احمد', Validators.required)
+        ,gender:new FormControl('احمد', Validators.required)
   
   
   
       });
       this.thirdFormGroup = this._formBuilder.group({
-        Email: new FormControl('', [Validators.required,Validators.email]),
-        Name: new FormControl('', [Validators.required,Validators.minLength(5)]),
-        Mobile: new FormControl('', Validators.required),
+        Email: new FormControl('d@gd', [Validators.required,Validators.email]),
+        Name: new FormControl('يياحمد', [Validators.required,Validators.minLength(5)]),
+        Mobile: new FormControl('123456789123', Validators.required),
       });
 
       this.forthFormGroup = this._formBuilder.group({
        
-        calender: new FormControl('', Validators.required),
-        date: new FormControl('', Validators.required)
+        calender: new FormControl('123456789123', Validators.required),
+        date: new FormControl('123456789123', Validators.required)
       });
 
     
@@ -317,11 +317,11 @@ datee(){
    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*1)));
    this.showAge2=this.showAge
    
-  this.price1= this.price*0.3
-   this.price2=this.price*0.3
-  this.price3=this.price*0.3
-  this.price4=this.price*0.3
-  this.price5=this.price*0.3
+  this.price1= this.price*0.1
+   this.price2=this.price*0.1
+  this.price3=this.price*0.11
+  this.price4=this.price*0.12
+  this.price5=this.price*0.09
   console.log("price1",this.price1)
   console.log("price2",this.price2)
   console.log("price3",this.price3)
@@ -337,11 +337,11 @@ datee(){
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*2)));
     this.showAge2=this.showAge
      
-  this.price1= this.price*0.3
-  this.price2=this.price*0.4
- this.price3=this.price*0.3
- this.price4=this.price*0.4
- this.price5=this.price*0.3
+  this.price1= this.price*0.1
+  this.price2=this.price*0.13
+ this.price3=this.price*0.12
+ this.price4=this.price*0.14
+ this.price5=this.price*0.09
  console.log("price1",this.price1)
   console.log("price2",this.price2)
  console.log("price3",this.price3)
@@ -355,11 +355,158 @@ datee(){
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*3)));
     this.showAge2=this.showAge
      
-  this.price1= this.price*0.4
-  this.price2=this.price*0.5
- this.price3=this.price*0.5
- this.price4=this.price*0.6
- this.price5=this.price*0.4
+  this.price1= this.price*0.15
+  this.price2=this.price*0.14
+ this.price3=this.price*0.12
+ this.price4=this.price*0.14
+ this.price5=this.price*0.11
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   }
+   else if(this.listaddforth.calender=='اربع شهور' ){
+    console.log('4')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*3)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.17
+  this.price2=this.price*0.16
+ this.price3=this.price*0.16
+ this.price4=this.price*0.15
+ this.price5=this.price*0.14
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   } else if(this.listaddforth.calender=='خمس شهور' ){
+    console.log('خمس')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*3)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.17
+  this.price2=this.price*0.16
+ this.price3=this.price*0.17
+ this.price4=this.price*0.16
+ this.price5=this.price*0.15
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   } else if(this.listaddforth.calender=='ست شهور' ){
+    console.log('6')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*3)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.20
+  this.price2=this.price*0.21
+ this.price3=this.price*0.25
+ this.price4=this.price*0.23
+ this.price5=this.price*0.20
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   } else if(this.listaddforth.calender=='سبع شهور' ){
+    console.log('7')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*3)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.25
+  this.price2=this.price*0.23
+ this.price3=this.price*0.25
+ this.price4=this.price*0.23
+ this.price5=this.price*0.20
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   } else if(this.listaddforth.calender=='ثمان شهور' ){
+    console.log('2yer')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*3)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.32
+  this.price2=this.price*0.34
+ this.price3=this.price*0.33
+ this.price4=this.price*0.33
+ this.price5=this.price*0.31
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   } else if(this.listaddforth.calender=='تسعة شهور' ){
+    console.log('9')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*3)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.35
+  this.price2=this.price*0.31
+ this.price3=this.price*0.34
+ this.price4=this.price*0.31
+ this.price5=this.price*0.25
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   } 
+   else if(this.listaddforth.calender=='عشرة شهور' ){
+    console.log('عشرة')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*3)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.30
+  this.price2=this.price*0.31
+ this.price3=this.price*0.33
+ this.price4=this.price*0.32
+ this.price5=this.price*0.29
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   }
+   else if(this.listaddforth.calender=='احدى عشر شهر' ){
+    console.log('عشرة')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*3)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.36
+  this.price2=this.price*0.30
+ this.price3=this.price*0.39
+ this.price4=this.price*0.33
+ this.price5=this.price*0.28
 
  console.log("price1",this.price1)
   console.log("price2",this.price2)
@@ -373,11 +520,11 @@ datee(){
     
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*365*4)));
     this.showAge2=this.showAge
-    this.price1= this.price*0.2
-    this.price2=this.price*0.5
-   this.price3=this.price*0.45
-   this.price4=this.price*0.5
- this.price5=this.price*0.3
+    this.price1= this.price*0.28
+    this.price2=this.price*0.28
+   this.price3=this.price*0.33
+   this.price4=this.price*0.35
+ this.price5=this.price*0.25
 
   
 
