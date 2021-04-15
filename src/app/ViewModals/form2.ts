@@ -10,4 +10,6 @@ Review?:string,
 Section:string,
 Title?:string,
 TourDiscount?:string,
+noChiled?:string,
+gender?:string
 }

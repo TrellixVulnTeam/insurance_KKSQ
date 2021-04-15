@@ -19,6 +19,9 @@ carColor?:string,
 price?:string,
 carTypeOtam?:string,
 licenceType?:string,
+noChiled?:string,
+gender?:string
+
 
 date?:string,
 currentdate?:string,

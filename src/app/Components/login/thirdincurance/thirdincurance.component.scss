@@ -71,6 +71,9 @@ h1{
     border-width: 2px;
 }
 
+option{
+  border-top: black;
+}
 hr{
     border: 0;
     clear:both;
@@ -172,6 +175,10 @@ option{
   
   .card .card-header-danger .card-icon{
     background: linear-gradient(60deg, #ef5350, #e53935);
+  }
+  .card-header-primary .card-icon{
+    background: linear-gradient(60deg, #942bf7, #861beb);
+
   }
   
   .card [class*="card-header-"],
@@ -291,7 +298,7 @@ option{
   .flexdiv{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     // justify-content:flex-start;
   }
 
@@ -302,4 +309,25 @@ option{
   .titleinsurance{
     text-align: center;
     align-items: center;
+  }
+
+  .inputprice {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="30"><text x="5" y="19" style="font: bold 16px Arial;">$</text></svg>') no-repeat;
+
+  }
+
+  :host ::ng-deep .p-dropdown {
+    width: 14rem;
+  }
+
+  optgroup{
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    direction: ltr;
+    
+  }
+  .ss{
+    background-color: rgba(0, 0, 255, 0.411);
+
   }

@@ -1,43 +1,41 @@
 <!-- <app-header></app-header> -->
 
 <div class="mt-5 m-5 divheader">
-  <br>
-  <br>
-  <br>
-  <br>
-  <mat-horizontal-stepper linear #stepper dir='rtl' class="cc">
-    <mat-step [stepControl]="firstFormGroup" >
-    
-      <form class="divInput" [formGroup]="firstFormGroup" dir='rtl' >
+  <br />
+  <br />
+  <br />
+  <br />
+  <mat-horizontal-stepper linear #stepper dir="rtl" class="cc">
+    <mat-step [stepControl]="firstFormGroup">
+      <form class="divInput" [formGroup]="firstFormGroup" dir="rtl">
         <ng-template matStepLabel>معلومات مالك الوثيقة</ng-template>
-<div  class="flexheader" >
-        <h1 >الهويات المسجلة</h1>
-        
-
-      </div>
-      <hr>
-      
+        <div class="flexheader">
+          <h1>الهويات المسجلة</h1>
+        </div>
+        <hr />
 
         <div class="form-row">
-            <div class="col-md-6  mb-3">
-              <label for="validationServer01" class="font">اسم طالب التأمين</label>
-              <input
+          <div class="col-md-6 mb-3">
+            <label for="validationServer01" class="font"
+              >اسم طالب التأمين</label
+            >
+            <input
               formControlName="Name"
-                type="text"
-                class="form-control"
-                id="validationServer01"
-                
-                value="Mark"
-                required
-              />
+              type="text"
+              class="form-control"
+              id="validationServer01"
+              value="Mark"
+              required
+            />
 
-              <div
+            <div
               *ngIf="
                 firstFormGroup.controls['Name'].invalid &&
-                (firstFormGroup.get('Name')?.dirty || firstFormGroup.get('Name')?.touched)
+                (firstFormGroup.get('Name')?.dirty ||
+                  firstFormGroup.get('Name')?.touched)
               "
             >
-            <br />
+              <br />
               <small
                 *ngIf="firstFormGroup.controls['Name'].errors?.required"
                 class="alert alert-danger"
@@ -49,504 +47,771 @@
                 >Please Enter Your Name</small
               >
               <br />
-            </div>        
-              </div>
-            <div class="col-md-6  mb-3">
-                <label for="validationServer01" class="font">البريد الالكترونى</label>
-                <input 
-                formControlName="Email"
-                  type="text"
-                  class="form-control"
-                  id="validationServer01"
-                  
-                  value="Name"
-                  
-                />
-                <div
-                *ngIf="
-                  firstFormGroup.controls['Email'].invalid &&
-                  (firstFormGroup.get('Email')?.dirty || firstFormGroup.get('Email')?.touched)
-                "
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="validationServer01" class="font"
+              >البريد الالكترونى</label
+            >
+            <input
+              autofocus
+              formControlName="Email"
+              type="text"
+              class="form-control"
+              id="validationServer01"
+              value="Name"
+            />
+
+            <div
+              *ngIf="
+                firstFormGroup.controls['Email'].invalid &&
+                (firstFormGroup.get('Email')?.dirty ||
+                  firstFormGroup.get('Email')?.touched)
+              "
+            >
+              <br />
+              <small
+                *ngIf="firstFormGroup.controls['Email'].errors?.required"
+                class="alert alert-danger"
+                >Please Enter Your Email</small
+              >
+              <small
+                *ngIf="firstFormGroup.controls['Email'].hasError('email')"
+                class="alert alert-danger"
+                >example@example.com</small
               >
               <br />
-                <small
-                  *ngIf="firstFormGroup.controls['Email'].errors?.required"
-                  class="alert alert-danger"
-                  >Please Enter Your Email</small
-                >
-                <small
-                  *ngIf="firstFormGroup.controls['Email'].hasError('email')"
-                  class="alert alert-danger"
-                  >example@example.com</small
-                >
-                <br />
-                <br />
-              </div>               </div>
-            </div>
-            <div class="form-row">
-              <div class="col-md-4  mb-3">
-                <label for="validationServer01" class="font">رقم الموبايل</label>
-                <input formControlName="Mobile"
-                  type="text"
-                  class="form-control"
-                  id="validationServer01"
-                  
-                  value="Mark"
-                  required
-                />
-                <div
-                *ngIf="
-                  firstFormGroup.controls['Mobile'].invalid &&
-                  (firstFormGroup.get('Mobile')?.dirty || firstFormGroup.get('Mobile')?.touched)
-                "
-              >
               <br />
-                <small
-                  *ngIf="firstFormGroup.controls['Mobile'].errors?.required"
-                  class="alert alert-danger"
-                  >Please Enter Your Mobile</small
-                >
-                <small
-                  *ngIf="firstFormGroup.controls['Mobile'].errors?.minlength"
-                  class="alert alert-danger"
-                  >Please Enter Your Mobile</small
-                >
-                <br />
-                <br />
-              </div>
-              </div>
-    
-          
             </div>
-            <div>
-              <button mat-button matStepperNext class="btn btn-lg btn-info" (click)="firstNext()">Next</button>
-              <button mat-button  class="btn btn-lg btn-primary mr-4" (click)="resetform(firstFormGroup)">Reset</button>
-              
-            </div>
-      
-      </form>
-    </mat-step>
-              <mat-step [stepControl]="secondFormGroup" >
-     <form  class="divInput" dir='rtl'[formGroup]="secondFormGroup">
-      <ng-template matStepLabel>اضف مركبة</ng-template>
-      <div  class="flexheader" >
-              <h1 >اضف مركبة</h1>
-             
-      
-            </div>
-            <hr>
-           
-            <div class="form-row">
-              <div class="col-md-3 mb-3 form-group">
-                <label for="TourID" class="font">الرقم التسلسلى للمركبة</label>
-
-                <input type="text" formControlName="id" class="form-control" />
-              </div>
-              <div class="col-md-3 mb-3 form-group">
-                <label class="font" for="Title">نوع ناقل الحركة</label>
-                <select class="form-control" formControlName="Title" id="Title">
-                        
-                  <option>اوتوماتيكي</option>
-                  <option>يدوي</option>
-               
-                </select>
-             
-              </div>
-              <div class="col-md-3 mb-3 form-group">
-                <label class="font" for="Date">الغرض من الاستخدام</label>
-                <select class="form-control" formControlName="Date" id="Date">
-                        
-                  <option>شخصى</option>
-                  <option>اجرة</option>
-                  <option>حمل</option>
-                  <option>اخرى</option>
-               
-                </select>
-           
-              </div>
-              <div class="col-md-3 mb-3 form-group">
-                <label class="font" for="TourDistance">قيمة المركبة التقديرية</label>
-
-                <input
-                  type="text"
-                  class="form-control"
-                  id="TourDistance"
-                  
-                  formControlName="Section"
-                  [(ngModel)]="price"
-                />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="col-md-3 mb-3 form-group">
-                <label class="font" for="Image">سنة الصنع</label>
-                <input
-                type="text"
-                class="form-control"
-                id="Image"
-                
-                formControlName="Image"
-                [(ngModel)]="yearof"
-              />
-               
-              
-              </div>
-              <div class="col-md-3 mb-3 form-group">
-                <label class="font" for="Rate">نوع المركبة</label>
-                <select class="form-control selectpicker" title="Select your surfboard" formControlName="Rate" id="Rate">
-               
-                  <option ><img src="../../../../assets/dre.png" width="50%" height="50%">TOYOYA</option>
-                  <option data-thumbnail="images/icon-chrome.png">Ford</option>
-                  <option data-thumbnail="images/icon-chrome.png">BMW</option>
-                  <option data-thumbnail="images/icon-chrome.png">Audi</option>
-                  <option data-thumbnail="images/icon-chrome.png">Volkswagen</option>
-                  <option data-thumbnail="images/icon-chrome.png">Mercedes </option>
-                  <option data-thumbnail="images/icon-chrome.png">NISSAN </option>
-                  <option data-thumbnail="images/icon-chrome.png">Ferrari</option>
-                  <option data-thumbnail="images/icon-chrome.png">VOLVO</option>
-                  <option data-thumbnail="images/icon-chrome.png">Mitsubishi</option>
-                  <option data-thumbnail="images/icon-chrome.png">Peugeot</option>
-                  <option data-thumbnail="../../../../assets/toy.jpg"> KIA</option>
-                 
-               
-                </select>
-              
-              </div>
-              <div class="col-md-3 mb-3 form-group">
-                <label class="font" for="Review">لون المركبة</label>
-                <input
-                type="text"
-                class="form-control"
-                id="Review"
-                
-                formControlName="Review"
-              />
-              
-              </div>
-              <div class="col-md-3 mb-3 form-group">
-                <label class="font" for="TourBooked">رقم الشاصى للمركبة</label>
-
-                <input
-                  type="text"
-                  formControlName="Booked"
-                  class="form-control"
-                />
-              </div>
-            </div>
-<hr>
-          <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ person \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-            <div class="form-row">
-              <div class="col-md-3 mb-3 form-group">
-                <label class="font" for="Price">الحالة الاجتماعية</label>
-                <select class="form-control" formControlName="Price" id="Price">
-                        
-                  <option>اعزب</option>
-                  <option>متزوج</option>
-               
-                </select>
-              
-              </div>
-              <div class="col-md-3 mb-3 form-group">
-                <label class="font" for="TourOldPrice">المهنة</label>
-
-            
-                <select class="form-control" formControlName="OldPrice" id="OldPrice">
-                        
-                  <option>قطاع حكومى</option>
-                  <option>قطاع خاص</option>
-                  <option>اعمال حرة </option>
-                  <option>طالب </option>
-                  <option>كاسب </option>
-                  <option>لا يعمل </option>
-               
-                </select>
-              </div>
-              <div class="col-md-3 mb-3 form-group">
-                <label class="font" for="TourDiscount">نوع رخصة القيادة</label>
-                <select class="form-control" formControlName="TourDiscount" id="TourDiscount">
-                        
-                  <option>خصوصي</option>
-                  <option>عامة</option>
-                  <option>أخرى</option>
-               
-                </select>
-               
-            
-            </div>
-
-            </div>
-              
-            <div class="w-50">
-              <button class="btn btn-lg btn-danger mr-3" mat-button matStepperPrevious>Back</button>
-
-              <button  class="btn btn-lg btn-info mr-3" (click)="scondform()" mat-button matStepperNext>Next</button>
-              <button mat-button  class="btn btn-lg btn-primary mr-4" (click)="resetform(secondFormGroup)">Reset</button>
-
-
-            </div>
-          </form>
-      <div>
-     
-      </div>
-    </mat-step>
-    <mat-step  >
-      <ng-template class="ng-template" matStepLabel>Done</ng-template>
-      <form class="divInput2"  dir='rtl' [formGroup]="forthFormGroup" >
-        <div  class="flexheader" >
-          <h1 >تاريخ بدء الوثيقة</h1>
-          
+          </div>
         </div>
-        <hr>
-        <div   class="flexdiv2">
-        <label class="font" >متى تريد أن يبدأ تاريخ سريان الوثيقة ؟</label>
-        <br>
-       
-        <!-- <input type="date" [(ngModel)]="age" /> -->
-        
-        <input type="date" class="form-control w-25" formControlName="date" [(ngModel)]="dateOfBirth" name="something">
-        <!-- <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker> -->
-     <br>
-     <br>
-     <br>
-    
-     <label class="font" >{{showAge  | date:'yyyy-MM-dd'}}</label>
-     <div class="col-md-3 mb-3 form-group">
-      <label class="font" for="Title">اختيار عدد السنين</label>
-      <select class="form-control" formControlName="calender" [(ngModel)]="noyear" id="Title">
-              
-        <option>سنة</option>
-        <option>سنتين</option>
-        <option>ثلاث سنوات</option>
-        <option>اربع سنوات</option>
-     
-      </select>
-    </div>
-    </div>
-
-     <br>
-     <br>
-      <div>
-        <!-- <button  (click)="datee()" class="btn btn-lg btn-info mr-4">date</button> -->
-        
-        <button mat-button matStepperPrevious class="btn btn-lg btn-danger mr-4">Back</button>
-        <button mat-button matStepperNext (click)="thirdform()" class="btn btn-lg btn-info mr-4">Next</button>
-        <button mat-button  class="btn btn-lg btn-primary mr-4" (click)="resetform(forthFormGroup)">Reset</button>
-
-      </div>
-    </form>
-    </mat-step>
-    <mat-step >
-      <form class="divInput" [formGroup]="thirdFormGroup" dir='rtl' >
-        <ng-template matStepLabel>معلومات مالك الوثيقة</ng-template>
-<div  class="flexheader" >
-        <h1 >استكمل بيانات عنوانك الوطنى</h1>
-      </div>
-      <hr>
         <div class="form-row">
-            <div class="col-md-6  mb-3">
-              <label for="validationServer01" class="font">رقم الدار</label>
-              <input
-              formControlName="Name"
-                type="text"
-                class="form-control"
-                id="validationServer01"
-                
-                value="Mark"
-                required
-              />
-
-               
-              </div>
-            <div class="col-md-6  mb-3">
-                <label for="validationServer01" class="font">القضاء</label>
-                <input 
-                formControlName="Email"
-                  type="text"
-                  class="form-control"
-                  id="validationServer01"
-                  
-                  value="Mark"
-                  required
-                />
-              </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationServer01" class="font">رقم الموبايل</label>
+            <input
+              formControlName="Mobile"
+              type="text"
+              class="form-control"
+              id="validationServer01"
+              value="Mark"
+              required
+            />
+            <div
+              *ngIf="
+                firstFormGroup.controls['Mobile'].invalid &&
+                (firstFormGroup.get('Mobile')?.dirty ||
+                  firstFormGroup.get('Mobile')?.touched)
+              "
+            >
+              <br />
+              <small
+                *ngIf="firstFormGroup.controls['Mobile'].errors?.required"
+                class="alert alert-danger"
+                >Please Enter Your Mobile</small
+              >
+              <small
+                *ngIf="firstFormGroup.controls['Mobile'].errors?.minlength"
+                class="alert alert-danger"
+                >Please Enter Your Mobile</small
+              >
+              <br />
+              <br />
             </div>
-            <div class="form-row">
-              <div class="col-md-4  mb-3">
-                <label for="validationServer01" class="font">المحافظة</label>
-               
-                <select class="form-control" formControlName="Mobile" id="Date">
-                 
-                <option>أربيل</option>
-                <option>كربلاء</option>
-                <option>ذي قار</option>
-                <option>صلاح الدين</option>
-                <option>بابل</option>
-                <option>بغداد</option>
-                <option>البصرة</option>
-                <option>دهوك</option>
-                  <option>الأنبار</option>
-                  <option>النجف</option>
-                  <option>القادسية</option>
-                  <option>السليمانية</option>
-                  <option>واسط</option>
-                  <option>ميسان</option>
-                  <option>نينوى</option>
-                  <option>كركوك</option>
-                  <option>ديالى</option>
-                  <option>دهوك</option>
-                 
-               
-                </select>
-               
-              </div>
-    
-          
-            </div>
-            <div>
-              <button class="btn btn-lg btn-danger mr-3" mat-button matStepperPrevious>Back</button>
-
-              <button mat-button matStepperNext class="btn btn-lg btn-info mr-4" (click)="forthform()">Next</button>
-        <button mat-button  class="btn btn-lg btn-primary mr-4" (click)="resetform(thirdFormGroup)">Reset</button>
-
-            </div>
-      
+          </div>
+        </div>
+        <div>
+          <button
+            mat-button
+            matStepperNext
+            class="btn btn-lg btn-info"
+            (click)="firstNext()"
+          >
+            Next
+          </button>
+          <button
+            mat-button
+            class="btn btn-lg btn-primary mr-4"
+            (click)="resetform(firstFormGroup)"
+          >
+            Reset
+          </button>
+        </div>
       </form>
     </mat-step>
-    <mat-step >
-      <ng-template matStepLabel>الشركات</ng-template>
-      <div  class="flexheader" >
-              <h1 >اختيار الشركة </h1>
-              
-            </div>
-        <div  class="content">
+    <mat-step [stepControl]="secondFormGroup">
+      <form class="divInput" dir="rtl" [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>اضف مركبة</ng-template>
+        <div class="flexheader">
+          <h1>اضف مركبة</h1>
+        </div>
+        <hr />
 
-          <div class="container-fluid">
-            <div class="row">
-              <div *ngFor="let c of Cards" class="col-lg-3 col-md-6 col-sm-6">
-                <div class="card card-stats">
-                  <div class="card-header {{c.ColorBck}} card-header-icon">
-                    <div class="card-icon">
-                      <!-- <i class="material-icons">globe-americas</i> -->
-                      <!-- <i class="{{c.Icon}}"></i> -->
-                      <img src="{{c.Icon}}">
-                      <!-- <i class="fas fa-hotel material-icons"></i> -->
-                    </div>
-                    <p class="card-category">{{c.title}}</p>
-                    <h3 class="card-title"> ${{c.NoDocument | number: '1.0-0'}}
-                      <!-- <small>GB</small> -->
-                    </h3>
+        <div class="form-row">
+          <div class="col-md-3 mb-3 form-group">
+            <label for="TourID" class="font">الرقم التسلسلى للمركبة</label>
+
+            <input type="text" formControlName="id" class="form-control" />
+          </div>
+          <div class="col-md-3 mb-3 form-group">
+            <label class="font" for="Title">نوع ناقل الحركة</label>
+            <select class="form-control" formControlName="Title" id="Title">
+              <option>اوتوماتيكي</option>
+              <option>يدوي</option>
+            </select>
+          </div>
+          <div class="col-md-3 mb-3 form-group">
+            <label class="font" for="Date">الغرض من الاستخدام</label>
+            <select class="form-control" formControlName="Date" id="Date">
+              <option>شخصى</option>
+              <option>اجرة</option>
+              <option>حمل</option>
+              <option>اخرى</option>
+            </select>
+          </div>
+          <div class="col-md-3 mb-3 form-group">
+            <label class="font" for="TourDistance"
+              >قيمة المركبة التقديرية</label
+            >
+
+            <input
+              type="text"
+              class="form-control inputprice"
+              id="TourDistance"
+              formControlName="Section"
+              [(ngModel)]="price"
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-3 mb-3 form-group">
+            <label class="font" for="Image">سنة الصنع</label>
+            <select
+              class="form-control selectpicker"
+              title="Select your surfboard"
+              formControlName="Image"
+              [(ngModel)]="yearof"
+              id="Rate"
+            >
+              <option *ngFor="let item of yeararr">{{ item.no }}</option>
+            </select>
+          </div>
+          <div class="col-md-3 mb-3 form-group">
+            <label class="font" for="Rate">نوع المركبة</label>
+            <!-- <p-cascadeSelect class="form-control selectpicker" formControlName="Rate" [(ngModel)]="selectedCity1" [options]="countries" optionLabel="cname" optionGroupLabel="name"
+                  [optionGroupChildren]="['states', 'cities']" [style]="{'minWidth': '14rem'}">
+                </p-cascadeSelect>
+ -->
+            <select
+              matNativeControl
+              class="form-control selectpicker"
+              formControlName="Rate"
+            >
+              <optgroup label="TOYOYA">
+                <option value=" Avalon">Avalon</option>
+                <option value=" Camry">Camry</option>
+
+                <option value=" Prius">Prius</option>
+                <option value=" Yaris">Yaris</option>
+
+                <option value=" 86">86</option>
+                <option value=" Sienna">Sienna</option>
+
+                <option value=" C-HR">C-HR</option>
+
+                <option value=" RAV4">RAV4</option>
+
+                <option value=" Highlander">Highlander</option>
+                <option value=" 4Runner">4Runner</option>
+
+                <option>Tacoma</option>
+                <option>Tundra</option>
+              </optgroup>
+              <optgroup class="ss" label="Ford">
+                <option>Edge</option>
+                <option>Bronco</option>
+                <option>Ecosport</option>
+                <option>Edge</option>
+                <option>Endeavo</option>
+                
+                <option>Escape</option>
+                <option>Everest</option>
+                <option>Flex</option>
+                <option>F-450</option>
+              </optgroup>
+
+              <optgroup label="BMW">
+                <option>5</option>
+                <option>6</option>
+                <option>X2</option>
+                <option>X3</option>
+                <option>X4</option>
+                <option>X5</option>
+                <option>8</option>
+                <option>Z4</option>
+                <option>3</option>
+                <option>1</option>
+                <option>X6</option>
+                <option>X7</option>
+                <option>2</option>
+                <option>4</option>
+                <option>X1</option>
+              </optgroup>
+
+              <optgroup class="ss" label="Audi">
+<option>    Audi A6     </option>
+<option>Audi A3 </option>
+<option>Audi A5 </option>
+<option>Audi A6 </option>
+<option>Audi S2 Coupé B3 </option>
+<option>Audi S4 C4 </option>
+<option>Audi S2 Avant B4 </option>
+<option>Audi S2 Sedan B4 </option>
+<option>Audi Avant RS 2 P1 </option>
+<option>Audi S8 D2 </option>
+<option>Audi A4 </option>
+<option>Audi A8 </option>
+<option>Audi A3 </option>
+
+              </optgroup>
+              <optgroup label="Volkswagen">
+<option> Cross Sport </option>
+<option>Tiguan</option>  
+<option>Jetta </option> 
+<option>Jetta GLI</option>  
+<option>Passat</option>  
+<option>Arteon</option> 
+              </optgroup>
+              <optgroup class="ss" label="Mercedes ">
+                <option> Vito</option>
+<option>C190 AMG GT</option>
+<option>X253 GLC</option>
+<option>W213 E</option>
+<option>BR470 X</option>
+<option>W177 A </option>
+<option>C257 CLS</option>
+<option>Mercedes-AMG </option>
+<option>W463 G</option>
+<option>EQC</option>
+<option>W167 GLE</option>
+<option>W247 B </option>
+<option>C118 CLA</option>
+<option>X247 GLB</option>
+<option>X167 GLS</option>
+              </optgroup>
+              <optgroup label="NISSAN ">
+                <option> 370Z</option>
+<option> Altima</option>
+<option> Armada</option>
+<option> GT-R</option>
+<option> Kicks</option>
+<option> Maxima</option>
+<option> Murano</option>
+<option> NV Cargo</option>
+              </optgroup>
+             
+              <optgroup class="ss" label=" Mazda  ">
+                <option> MX-5 RF</option>
+<option>2. Hatchback</option>
+<option>5</option>
+<option> CX-3</option>
+<option> CX-9</option>
+              </optgroup>
+              <optgroup label="VOLVO">
+                <option value="audi">S90/V90</option>
+                <option value="audi">Volvo C40</option>
+                <option value="audi">	XC40</option>
+                <option value="audi">	C70</option>
+                <option value="audi">XC90</option>
+                <option value="audi">	C30</option>
+              </optgroup>
+              <optgroup class="ss" label="Mitsubishi">
+                <option value="audi">Audi</option>
+              </optgroup>
+              <optgroup label="Peugeot">
+                <option value="audi">Audi</option>
+              </optgroup>
+              <optgroup class="ss" label=" KIA">
+                <option value="audi">Audi</option>
+              </optgroup>
+              <optgroup label=" lexus">
+                <option value="audi">Audi</option>
+              </optgroup>
+              <optgroup class="ss" label=" Chevrolet">
+                <option value="audi">Audi</option>
+              </optgroup>
+              <optgroup label=" GMC">
+                <option value="audi">Audi</option>
+              </optgroup>
+              <optgroup class="ss" label=" Hyundai ">
+                <option value="audi">Audi</option>
+              </optgroup>
+              <!-- <optgroup label=" Land rover">
+                <option value="audi">Audi</option>
+              </optgroup>
+              <optgroup class="ss" label=" Infiniti ">
+                <option value="audi">Audi</option>
+              </optgroup>
+              <optgroup label=" Rolls-royce">
+                <option value="audi">Audi</option>
+              </optgroup>
+              <optgroup class="ss" label=" Lamborghini ">
+                <option value="audi">Audi</option>
+              </optgroup>
+            
+              <optgroup label=" Suzuki ">
+                <option value="audi">Audi</option>
+              </optgroup> -->
+             
+            </select>
+
+            <!-- <select class="form-control selectpicker" title="Select your surfboard" formControlName="Rate" id="Rate">
+               
+                  <option >TOYOYA</option>
+                  <option >Ford</option>
+                  <option >BMW</option>
+                  <option >Audi</option>
+                  <option >Volkswagen</option>
+                  <option >Mercedes </option>
+                  <option >NISSAN </option>
+                  <option >Ferrari</option>
+                  <option >VOLVO</option>
+                  <option >Mitsubishi</option>
+                  <option >Peugeot</option>
+                  <option > KIA</option>
+                  <option > lexus</option>
+                  <option > Chevrolet</option>
+                  <option > GMC</option>
+                  <option > Hyundai </option>
+                  <option > Land rover</option>
+                  <option > Infiniti </option>
+                  <option > Rolls-royce</option>
+                  <option > Lamborghini </option>
+                  <option > Ferrari </option>
+                  <option > Mazda  </option>
+                  <option > Suzuki </option>
+                  <option > Ferrari </option>
+                  <option > Ferrari </option>
+                 
+               
+                </select> -->
+          </div>
+          <div class="col-md-3 mb-3 form-group">
+            <label class="font" for="Review">لون المركبة</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Review"
+              formControlName="Review"
+            />
+          </div>
+          <div class="col-md-3 mb-3 form-group">
+            <label class="font" for="TourBooked">رقم الشاصى للمركبة</label>
+
+            <input type="text" formControlName="Booked" class="form-control" />
+          </div>
+        </div>
+        <hr />
+        <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ person \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+        <div class="form-row">
+          <div class="col-md-3 mb-3 form-group">
+            <label class="font" for="Price">الحالة الاجتماعية</label>
+            <select
+              class="form-control"
+              formControlName="Price"
+              [(ngModel)]="statuesshow"
+              name="sss"
+              id="Price"
+            >
+              <option>اعزب</option>
+              <option>متزوج</option>
+            </select>
+          </div>
+
+          <div class="col-md-3 mb-3 form-group" *ngIf="statuesshow == 'متزوج'">
+            <label class="font" for="Price">عدد الاطفال</label>
+
+            <select
+              class="form-control"
+              formControlName="noChiled"
+              id="OldPrice"
+            >
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+          <div class="col-md-3 mb-3 form-group">
+            <label class="font" for="TourOldPrice">المهنة</label>
+
+            <select
+              class="form-control"
+              formControlName="OldPrice"
+              id="OldPrice"
+            >
+              <option>قطاع حكومى</option>
+              <option>قطاع خاص</option>
+              <option>اعمال حرة</option>
+              <option>طالب</option>
+              <option>كاسب</option>
+              <option>لا يعمل</option>
+            </select>
+          </div>
+          <div class="col-md-3 mb-3 form-group">
+            <label class="font" for="gender">مالك السيارة </label>
+            <select class="form-control" formControlName="gender" id="gender">
+              <option>ذكر</option>
+              <option>انثى</option>
+            </select>
+          </div>
+          <div class="col-md-3 mb-3 form-group">
+            <label class="font" for="TourDiscount">نوع رخصة القيادة</label>
+            <select
+              class="form-control"
+              formControlName="TourDiscount"
+              id="TourDiscount"
+            >
+              <option>خصوصي</option>
+              <option>عامة</option>
+              <option>أخرى</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="w-50">
+          <button
+            class="btn btn-lg btn-danger mr-3"
+            mat-button
+            matStepperPrevious
+          >
+            Back
+          </button>
+
+          <button
+            class="btn btn-lg btn-info mr-3"
+            (click)="scondform()"
+            mat-button
+            matStepperNext
+          >
+            Next
+          </button>
+          <button
+            mat-button
+            class="btn btn-lg btn-primary mr-4"
+            (click)="resetform(secondFormGroup)"
+          >
+            Reset
+          </button>
+        </div>
+      </form>
+      <div></div>
+    </mat-step>
+    <mat-step>
+      <ng-template class="ng-template" matStepLabel>Done</ng-template>
+      <form class="divInput2" dir="rtl" [formGroup]="forthFormGroup">
+        <div class="flexheader">
+          <h1>تاريخ بدء الوثيقة</h1>
+        </div>
+        <hr />
+        <div class="flexdiv2">
+          <label class="font">متى تريد أن يبدأ تاريخ سريان الوثيقة ؟</label>
+          <br />
+
+          <!-- <input type="date" [(ngModel)]="age" /> -->
+
+          <input
+            type="date"
+            class="form-control w-25"
+            formControlName="date"
+            [(ngModel)]="dateOfBirth"
+            name="something"
+          />
+          <!-- <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker> -->
+          <br />
+          <br />
+          <br />
+
+          <label class="font">{{ showAge | date: "yyyy-MM-dd" }}</label>
+          <div class="col-md-3 mb-3 form-group">
+            <label class="font" for="Title">اختيار عدد السنين</label>
+            <select
+              class="form-control"
+              formControlName="calender"
+              [(ngModel)]="noyear"
+              id="Title"
+            >
+              <option>شهر</option>
+              <option>شهرين</option>
+              <option>ثلاث شهور</option>
+              <option>سنة</option>
+            </select>
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <div>
+          <!-- <button  (click)="datee()" class="btn btn-lg btn-info mr-4">date</button> -->
+
+          <button
+            mat-button
+            matStepperPrevious
+            class="btn btn-lg btn-danger mr-4"
+          >
+            Back
+          </button>
+          <button
+            mat-button
+            matStepperNext
+            (click)="thirdform()"
+            class="btn btn-lg btn-info mr-4"
+          >
+            Next
+          </button>
+          <button
+            mat-button
+            class="btn btn-lg btn-primary mr-4"
+            (click)="resetform(forthFormGroup)"
+          >
+            Reset
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <form class="divInput" [formGroup]="thirdFormGroup" dir="rtl">
+        <ng-template matStepLabel>معلومات مالك الوثيقة</ng-template>
+        <div class="flexheader">
+          <h1>استكمل بيانات عنوانك الوطنى</h1>
+        </div>
+        <hr />
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationServer01" class="font">رقم الدار</label>
+            <input
+              formControlName="Name"
+              type="text"
+              class="form-control"
+              id="validationServer01"
+              value="Mark"
+              required
+            />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="validationServer01" class="font">القضاء</label>
+            <input
+              formControlName="Email"
+              type="text"
+              class="form-control"
+              id="validationServer01"
+              value="Mark"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationServer01" class="font">المحافظة</label>
+
+            <select class="form-control" formControlName="Mobile" id="Date">
+              <option>أربيل</option>
+              <option>كربلاء</option>
+              <option>ذي قار</option>
+              <option>صلاح الدين</option>
+              <option>بابل</option>
+              <option>بغداد</option>
+              <option>البصرة</option>
+              <option>دهوك</option>
+              <option>الأنبار</option>
+              <option>النجف</option>
+              <option>القادسية</option>
+              <option>السليمانية</option>
+              <option>واسط</option>
+              <option>ميسان</option>
+              <option>نينوى</option>
+              <option>كركوك</option>
+              <option>ديالى</option>
+              <option>دهوك</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <button
+            class="btn btn-lg btn-danger mr-3"
+            mat-button
+            matStepperPrevious
+          >
+            Back
+          </button>
+
+          <button
+            mat-button
+            matStepperNext
+            class="btn btn-lg btn-info mr-4"
+            (click)="forthform()"
+          >
+            Next
+          </button>
+          <button
+            mat-button
+            class="btn btn-lg btn-primary mr-4"
+            (click)="resetform(thirdFormGroup)"
+          >
+            Reset
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>الشركات</ng-template>
+      <div class="flexheader">
+        <h1>اختيار الشركة</h1>
+      </div>
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div *ngFor="let c of Cards" class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header {{ c.ColorBck }} card-header-icon">
+                  <div class="card-icon">
+                    <!-- <i class="material-icons">globe-americas</i> -->
+                    <!-- <i class="{{c.Icon}}"></i> -->
+                    <img src="{{ c.Icon }}" />
+                    <!-- <i class="fas fa-hotel material-icons"></i> -->
                   </div>
-                  <div class="card-footer">
-                    <div class="stats">
-                      <button mat-button matStepperNext class="ml-4 btn btn-lg btn-success" (click)="addInfo(c.NoDocument,c.Icon,c.title)" >اختيار</button>
-                      <!-- <button mat-button  class="btn btn-lg btn-primary mr-4" (click)="resetform(thirdFormGroup)">Reset</button> -->
-      
-                    </div>
+                  <p class="card-category">{{ c.title }}</p>
+                  <h3 class="card-title">
+                    ${{ c.NoDocument | number: "1.0-0" }}
+                    <!-- <small>GB</small> -->
+                  </h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <button
+                      mat-button
+                      matStepperNext
+                      class="ml-4 btn btn-lg btn-success"
+                      (click)="addInfo(c.NoDocument, c.Icon, c.title)"
+                    >
+                      اختيار
+                    </button>
+                    <!-- <button mat-button  class="btn btn-lg btn-primary mr-4" (click)="resetform(thirdFormGroup)">Reset</button> -->
                   </div>
                 </div>
               </div>
-             
-      
             </div>
-          
-            
           </div>
         </div>
-      
+      </div>
+
       <div>
-        <button class="btn btn-lg btn-danger" mat-button matStepperPrevious>Back</button>
+        <button class="btn btn-lg btn-danger" mat-button matStepperPrevious>
+          Back
+        </button>
 
         <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
       </div>
     </mat-step>
 
-    <mat-step >
+    <mat-step>
       <ng-template matStepLabel>فاتورة</ng-template>
       <div class="divInput" dir="rtl">
-      <div  class="flexheader" >
-              <h1 class="bckfont" >شكرا لاختيارك عرض السعر لمركبتك</h1>
-               </div>
-               <hr>
-               <div class="titleinsurance">
-                <h1 >تأمين ضد الغير</h1>
-               </div>
-        <div id="print-section" class="">
-<h2>الرجاء الاطلاع على تفاصيل فاتورة السداد</h2>
-<div class="flexdiv">
-  <h3 class="boldfont">نوع التامين</h3>
-  <h3 class="mr-5">{{item.insurancetype}}</h3>
-
-</div>
-<div class="flexdiv">
-  <h3 class="boldfont">اسم الفاتورة</h3>
-  <h3 class="mr-5">تامينى</h3>
-
-</div>
-<div class="flexdiv">
-  <h3 class="boldfont">رقم الفاتورة</h3>
-  <h3 class="mr-5">{{random}}</h3>
-
-</div><div class="flexdiv">
-  <h3 class="boldfont">قيمة الوثيقة</h3>
-  <h3 class="mr-5">${{item.NoDocument}}</h3>
-
-</div>
-
-<h2>معلومات المالك والمركبة</h2>
-<hr>
-         
-<div class="flexdiv">
-  <div>
-  <div class="flexdiv">
-  <h3 class="boldfont">تاريخ البدء</h3>
-  <h3 class="mr-5">{{dateOfBirth| date :'mediumDate'}}</h3>
-
-</div>
-
-<div class="flexdiv">
-  <h3 class="boldfont">تاريخ الانتهاء</h3>
-  <h3 class="mr-5">{{showAge| date :'mediumDate'}}</h3>
-
-</div>
-
-<div class="flexdiv">
-  <h3 class="boldfont">مالك الوثيقة</h3>
-  <h3 class="mr-5">{{item.Email}}</h3>
-
-</div>
-</div>
-<div class="mr-5">
-  <div class="flexdiv">
-  <h3 class="boldfont">الرقم التسلسلى</h3>
-  <h3 class="mr-5">{{item.serialNumber}}</h3>
-
-</div>
-
-<div class="flexdiv">
-  <h3 class="boldfont">لون المركبة</h3>
-  <h3 class="mr-5">{{item.carType}}</h3>
-
-</div>
-
-
-</div>
-</div>
-
-
-
+        <div class="flexheader">
+          <h1 class="bckfont">شكرا لاختيارك عرض السعر لمركبتك</h1>
         </div>
-      
-      
-      <div>
-        <button class="btn btn-lg btn-success " printSectionId="print-section" ngxPrint >Print</button>
+        <hr />
+        <div class="titleinsurance">
+          <h1>تأمين ضد الغير</h1>
+        </div>
+        <div id="print-section" class="">
+          <h2>الرجاء الاطلاع على تفاصيل فاتورة السداد</h2>
+          <div class="flexdiv">
+            <h3 class="boldfont">نوع التامين</h3>
+            <h3 class="mr-5">{{ item.insurancetype }}</h3>
+          </div>
+          <div class="flexdiv">
+            <h3 class="boldfont">اسم الفاتورة</h3>
+            <h3 class="mr-5">تامينى</h3>
+          </div>
+          <div class="flexdiv">
+            <h3 class="boldfont">رقم الفاتورة</h3>
+            <h3 class="mr-5">{{ random }}</h3>
+          </div>
+          <div class="flexdiv">
+            <h3 class="boldfont">قيمة التأمين</h3>
+            <h3 class="mr-5">${{ item.NoDocument }}</h3>
+          </div>
 
-        <button class="btn btn-lg btn-danger mr-4" mat-button matStepperPrevious>Back</button>
-        <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
+          <h2>معلومات المالك والمركبة</h2>
+          <hr />
+
+          <div class="flexdiv">
+            <div>
+              <div class="flexdiv">
+                <h3 class="boldfont">اسم مالك التامين</h3>
+                <h3 class="mr-5">{{ item.Name }}</h3>
+              </div>
+
+              <div class="flexdiv">
+                <h3 class="boldfont">رقم الموبايل</h3>
+                <h3 class="mr-5">{{ item.Mobile }}</h3>
+              </div>
+
+              <div class="flexdiv">
+                <h3 class="boldfont">البريد الالكتروني</h3>
+                <h3 class="mr-5">{{ item.Email }}</h3>
+              </div>
+            </div>
+
+            <div class="mr-5">
+              <div class="flexdiv">
+                <h3 class="boldfont">الرقم التسلسلى</h3>
+                <h3 class="mr-5">{{ item.serialNumber }}</h3>
+              </div>
+              <div class="flexdiv">
+                <h3 class="boldfont">تاريخ البدء</h3>
+                <h3 class="mr-5">{{ dateOfBirth | date: "mediumDate" }}</h3>
+              </div>
+
+              <div class="flexdiv">
+                <h3 class="boldfont">تاريخ الانتهاء</h3>
+                <h3 class="mr-5">{{ showAge | date: "mediumDate" }}</h3>
+              </div>
+              <div class="flexdiv">
+                <h3 class="boldfont">نوع المركبة</h3>
+                <h3 class="mr-5">{{ item.carType }}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <button
+            class="btn btn-lg btn-success"
+            printSectionId="print-section"
+            ngxPrint
+          >
+            Print
+          </button>
+
+          <button
+            class="btn btn-lg btn-danger mr-4"
+            mat-button
+            matStepperPrevious
+          >
+            Back
+          </button>
+          <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
+        </div>
       </div>
-    </div>
     </mat-step>
   </mat-horizontal-stepper>
-  
 </div>

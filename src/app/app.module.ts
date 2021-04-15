@@ -36,7 +36,15 @@ import {  MatInputModule } from '@angular/material/input';
 import { InfoDialogComponent } from './info-dialog/info-dialog.component';
 import { ThirdincuranceComponent } from './Components/login/thirdincurance/thirdincurance.component';
 
+import {MatMenuModule} from '@angular/material/menu';
+import {CascadeSelectModule} from 'primeng/cascadeselect';
+import {DropdownModule} from 'primeng/dropdown';
+import {ButtonModule} from 'primeng/button';
+import {MatSelectModule} from '@angular/material/select';
+
 import {NgxPrintModule} from 'ngx-print';
+import { AboutusComponent } from './Components/login/aboutus/aboutus.component';
+import { ContactComponent } from './Components/login/contact/contact.component';
 
 
 var firebaseConfig = {
@@ -65,7 +73,9 @@ var firebaseConfig = {
     LoginComponent,
     SidenavComponent,
     InfoDialogComponent,
-    ThirdincuranceComponent
+    ThirdincuranceComponent,
+    AboutusComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +95,13 @@ var firebaseConfig = {
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
-    NgxPrintModule
+    NgxPrintModule,
+    MatMenuModule,
+    CascadeSelectModule,
+    DropdownModule,
+    ButtonModule,
+    MatSelectModule
+
 
 
   ],
