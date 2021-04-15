@@ -283,7 +283,7 @@ this.item.elmohafza=this.listaddthird.Mobile
 this.item.date=this.dateOfBirth
 this.item.currentdate=this.today.toString()
 
-this.item.insurancetype="تأمين ضد الغير"
+this.item.insurancetype="تأمين شامل"
 console.log(this.item)
 
   this.insSer.addInsurance(this.item)
