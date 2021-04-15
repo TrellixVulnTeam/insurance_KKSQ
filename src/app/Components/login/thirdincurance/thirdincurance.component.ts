@@ -76,38 +76,38 @@ yeararr:any[]=[]
   constructor(private _formBuilder: FormBuilder,public dialog: MatDialog,private insSer:AddInsuranceService) {
     this.firstFormGroup = this._formBuilder.group({
       Email: new FormControl(localStorage.getItem("currentUserEmail"), [Validators.required,Validators.email]),
-      Name: new FormControl('يياحمد', [Validators.required,Validators.minLength(5)]),
-      Mobile: new FormControl('123456789123', [Validators.required,Validators.minLength(5)]),
+      Name: new FormControl('', [Validators.required,Validators.minLength(5)]),
+      Mobile: new FormControl('', [Validators.required,Validators.minLength(5)]),
     });
     this.secondFormGroup = this._formBuilder.group({
    
-      id:new FormControl('vbfdd', Validators.required),
-        Booked:new FormControl('احمد', Validators.required),
-        Date:new FormControl('احمد', Validators.required)
-        ,Image:new FormControl('احمد', Validators.required)
-        ,OldPrice:new FormControl('احمد', Validators.required)
-        ,Price:new FormControl('احمد', Validators.required)
-        ,Rate:new FormControl('احمد', Validators.required)
-        ,Review:new FormControl('احمد', Validators.required)
-        ,Section:new FormControl('50000', Validators.required)
-        ,Title:new FormControl('احمد', Validators.required)
-        ,TourDiscount:new FormControl('احمد', Validators.required)
-        ,noChiled:new FormControl('احمد', Validators.required)
-        ,gender:new FormControl('احمد', Validators.required)
+      id:new FormControl('', Validators.required),
+        Booked:new FormControl('', Validators.required),
+        Date:new FormControl('', Validators.required)
+        ,Image:new FormControl('', Validators.required)
+        ,OldPrice:new FormControl('', Validators.required)
+        ,Price:new FormControl('', Validators.required)
+        ,Rate:new FormControl('', Validators.required)
+        ,Review:new FormControl('', Validators.required)
+        ,Section:new FormControl('', Validators.required)
+        ,Title:new FormControl('', Validators.required)
+        ,TourDiscount:new FormControl('', Validators.required)
+        ,noChiled:new FormControl('')
+        ,gender:new FormControl('', Validators.required)
   
   
   
       });
       this.thirdFormGroup = this._formBuilder.group({
-        Email: new FormControl('d@gd', [Validators.required,Validators.email]),
-        Name: new FormControl('يياحمد', [Validators.required,Validators.minLength(5)]),
-        Mobile: new FormControl('123456789123', Validators.required),
+        Email: new FormControl('', [Validators.required,Validators.email]),
+        Name: new FormControl('', [Validators.required,Validators.minLength(5)]),
+        Mobile: new FormControl('', Validators.required),
       });
 
       this.forthFormGroup = this._formBuilder.group({
        
-        calender: new FormControl('123456789123', Validators.required),
-        date: new FormControl('123456789123', Validators.required)
+        calender: new FormControl('', Validators.required),
+        date: new FormControl('', Validators.required)
       });
 
     
