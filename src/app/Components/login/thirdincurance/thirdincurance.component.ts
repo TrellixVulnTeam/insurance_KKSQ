@@ -97,24 +97,24 @@ yeararr:any[]=[]
 
     this.firstFormGroup = this._formBuilder.group({
       Email: new FormControl(localStorage.getItem("currentUserEmail"), [Validators.required,Validators.email]),
-      Name: new FormControl('dssssssss', [Validators.required,Validators.minLength(5)]),
-      Mobile: new FormControl('dsssssssssssssssss', [Validators.required,Validators.minLength(5)]),
+      Name: new FormControl('', [Validators.required,Validators.minLength(5)]),
+      Mobile: new FormControl('', [Validators.required,Validators.minLength(5)]),
     });
     this.secondFormGroup = this._formBuilder.group({
    
-      id:new FormControl('c', Validators.required),
-        Booked:new FormControl('c', Validators.required),
-        Date:new FormControl('c', Validators.required)
-        ,Image:new FormControl('c', Validators.required)
-        ,OldPrice:new FormControl('c', Validators.required)
-        ,Price:new FormControl('c', Validators.required)
-        ,Rate:new FormControl('d', Validators.required)
-        ,Review:new FormControl('d', Validators.required)
-        ,Section:new FormControl('d', Validators.required)
-        ,Title:new FormControl('d', Validators.required)
-        ,TourDiscount:new FormControl('d', Validators.required)
-        ,noChiled:new FormControl('d')
-        ,gender:new FormControl('d', Validators.required)
+      id:new FormControl('', Validators.required),
+        Booked:new FormControl('', Validators.required),
+        Date:new FormControl('', Validators.required)
+        ,Image:new FormControl('', Validators.required)
+        ,OldPrice:new FormControl('', Validators.required)
+        ,Price:new FormControl('', Validators.required)
+        ,Rate:new FormControl('', Validators.required)
+        ,Review:new FormControl('', Validators.required)
+        ,Section:new FormControl('', Validators.required)
+        ,Title:new FormControl('', Validators.required)
+        ,TourDiscount:new FormControl('', Validators.required)
+        ,noChiled:new FormControl('')
+        ,gender:new FormControl('', Validators.required)
   
   
   

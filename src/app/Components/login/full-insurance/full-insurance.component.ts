@@ -84,105 +84,105 @@ items: SelectItem[]=[];
 
 itemm: string='';
 yeararr:any[]=[]
-  constructor(private _formBuilder: FormBuilder,public dialog: MatDialog,private insSer:AddInsuranceService,private languageService: LangService,
-    private translate: TranslateService,) { 
+constructor(private _formBuilder: FormBuilder,public dialog: MatDialog,private insSer:AddInsuranceService,private languageService: LangService,
+  private translate: TranslateService,) { 
 
-      this.translate.use(languageService.getLanguage());
+    this.translate.use(languageService.getLanguage());
 
 
-    this.firstFormGroup = this._formBuilder.group({
-      Email: new FormControl(localStorage.getItem("currentUserEmail"), [Validators.required,Validators.email]),
-      Name: new FormControl('dssssssss', [Validators.required,Validators.minLength(5)]),
-      Mobile: new FormControl('dsssssssssssssssss', [Validators.required,Validators.minLength(5)]),
+  this.firstFormGroup = this._formBuilder.group({
+    Email: new FormControl(localStorage.getItem("currentUserEmail"), [Validators.required,Validators.email]),
+    Name: new FormControl('', [Validators.required,Validators.minLength(5)]),
+    Mobile: new FormControl('', [Validators.required,Validators.minLength(5)]),
+  });
+  this.secondFormGroup = this._formBuilder.group({
+ 
+    id:new FormControl('', Validators.required),
+      Booked:new FormControl('', Validators.required),
+      Date:new FormControl('', Validators.required)
+      ,Image:new FormControl('', Validators.required)
+      ,OldPrice:new FormControl('', Validators.required)
+      ,Price:new FormControl('', Validators.required)
+      ,Rate:new FormControl('', Validators.required)
+      ,Review:new FormControl('', Validators.required)
+      ,Section:new FormControl('', Validators.required)
+      ,Title:new FormControl('', Validators.required)
+      ,TourDiscount:new FormControl('', Validators.required)
+      ,noChiled:new FormControl('')
+      ,gender:new FormControl('', Validators.required)
+
+
+
     });
-    this.secondFormGroup = this._formBuilder.group({
-   
-      id:new FormControl('c', Validators.required),
-        Booked:new FormControl('c', Validators.required),
-        Date:new FormControl('c', Validators.required)
-        ,Image:new FormControl('c', Validators.required)
-        ,OldPrice:new FormControl('c', Validators.required)
-        ,Price:new FormControl('c', Validators.required)
-        ,Rate:new FormControl('d', Validators.required)
-        ,Review:new FormControl('d', Validators.required)
-        ,Section:new FormControl('d', Validators.required)
-        ,Title:new FormControl('d', Validators.required)
-        ,TourDiscount:new FormControl('d', Validators.required)
-        ,noChiled:new FormControl('d')
-        ,gender:new FormControl('d', Validators.required)
-  
-  
-  
-      });
-      this.thirdFormGroup = this._formBuilder.group({
-        Email: new FormControl('', [Validators.required,Validators.email]),
-        Name: new FormControl('', [Validators.required,Validators.minLength(5)]),
-        Mobile: new FormControl('', Validators.required),
-      });
+    this.thirdFormGroup = this._formBuilder.group({
+      Email: new FormControl('', [Validators.required,Validators.email]),
+      Name: new FormControl('', [Validators.required,Validators.minLength(5)]),
+      Mobile: new FormControl('', Validators.required),
+    });
 
-      this.forthFormGroup = this._formBuilder.group({
-       
-        calender: new FormControl('', Validators.required),
-        date: new FormControl('', Validators.required)
-      });
-
-    
-      this.yeararr=[ 
-        {no:1970},
-        {no:1971},
-        {no:1972},
-        {no:1973},
-        {no:1974},
-        {no:1975},
-        {no:1976},
-        {no:1977},
-        {no:1978},
-        {no:1979},
-        {no:1980},
-        {no:1981},
-        {no:1982},
-        {no:1983},
-        {no:1984},
-        {no:1985},
-        {no:1986},
-        {no:1987},
-        {no:1988},
-        {no:1989},
-        {no:1990},
-        {no:1991},
-        {no:1992},
-        {no:1993},
-        {no:1994},
-        {no:1995},
-        {no:1996},
-        {no:1997},
-        {no:1998},
-        {no:1999},
-        {no:2001},
-        {no:2002},
-        {no:2003},
-        {no:2004},
-        {no:2005},
-        {no:2006},
-        {no:2007},
-        {no:2008},
-        {no:2009},
-        {no:2010},
-        {no:2011},
-        {no:2012},
-        {no:2013},
-        {no:2014},
-        {no:2015},
-        {no:2016},
-        {no:2017},
-        {no:2018},
-        {no:2019},
-        {no:2020},
-        {no:2021},
+    this.forthFormGroup = this._formBuilder.group({
      
+      calender: new FormControl('', Validators.required),
+      date: new FormControl('', Validators.required)
+    });
 
-      ]
-    }
+  
+    this.yeararr=[ 
+      {no:1970},
+      {no:1971},
+      {no:1972},
+      {no:1973},
+      {no:1974},
+      {no:1975},
+      {no:1976},
+      {no:1977},
+      {no:1978},
+      {no:1979},
+      {no:1980},
+      {no:1981},
+      {no:1982},
+      {no:1983},
+      {no:1984},
+      {no:1985},
+      {no:1986},
+      {no:1987},
+      {no:1988},
+      {no:1989},
+      {no:1990},
+      {no:1991},
+      {no:1992},
+      {no:1993},
+      {no:1994},
+      {no:1995},
+      {no:1996},
+      {no:1997},
+      {no:1998},
+      {no:1999},
+      {no:2001},
+      {no:2002},
+      {no:2003},
+      {no:2004},
+      {no:2005},
+      {no:2006},
+      {no:2007},
+      {no:2008},
+      {no:2009},
+      {no:2010},
+      {no:2011},
+      {no:2012},
+      {no:2013},
+      {no:2014},
+      {no:2015},
+      {no:2016},
+      {no:2017},
+      {no:2018},
+      {no:2019},
+      {no:2020},
+      {no:2021},
+   
+
+    ]
+  }
 
     
   //  ngOnChanges(changes: SimpleChanges): void {
