@@ -1,0 +1,59 @@
+{
+    "insurace":{
+        "mail":"Email",
+        "name":"Name",
+        "mobile":"Mobile",
+        "title":"Registered identities",
+        "serial":"Vehicle serial number",
+        "info":"Owner Information Document",
+        "add":"Add vehicle",
+        "type":"Transmission type",
+        "otom":"Automatic",
+        "manual":"Manual",
+        "use":"Purpose of use",
+        "personal":"Personal",
+        "fare":"Fare",
+        "load":"Load",
+        "other":"other",
+        "value":"Estimated vehicle value",
+        "year":"Year of manufacture",
+        "typeof":"Vehicle type",
+        "color":"Vehicle color",
+        "shase":"Vehicle shag number",
+        "status":"Marital status",
+        "maried":"Married",
+        "single":"single",
+        "child":"Number of children",
+        "profession":"Profession",
+        "gover":"Government sector",
+        "private":"Private sector",
+        "freelance":"Free business",
+        "student":"Student",
+        "kasb":"KASB.",
+        "notworking":"Not working",
+        "owner":"Car owner",
+        "male":"Male",
+        "female":"Female",
+        "licence":"Driver License type",
+        "priva":"private",
+        "general":"General",
+        "otheer":"other"
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+    },
+    "shared": {
+        "language": "en"
+      }
+}

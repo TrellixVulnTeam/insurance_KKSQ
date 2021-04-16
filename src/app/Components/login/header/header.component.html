@@ -28,7 +28,15 @@
           <a *ngIf="!isuser" class="nav-link fontlink" (click)="Logout()"
             > Logout </a
           >
+
+         
+        
         </li>
+        <li> 
+          <a class="nav-link fontlink" (click)="changeLanguage()">
+          {{ 'shared.language' | translate }}
+        </a>
+      </li>
       
       </ul>
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-5">

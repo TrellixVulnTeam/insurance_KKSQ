@@ -8,16 +8,16 @@
   <mat-horizontal-stepper linear #stepper dir="rtl" class="cc">
     <mat-step [stepControl]="firstFormGroup">
       <form class="divInput" [formGroup]="firstFormGroup" dir="rtl">
-        <ng-template matStepLabel>معلومات مالك الوثيقة</ng-template>
+        <ng-template matStepLabel>{{'insurace.info'|translate}}</ng-template>
         <div class="flexheader">
-          <h1>الهويات المسجلة</h1>
+          <h1>{{'insurace.title'|translate}}</h1>
         </div>
         <hr />
 
         <div class="form-row">
           <div class="col-md-6 mb-3">
             <label for="validationServer01" class="font"
-              >اسم طالب التأمين</label
+              >{{'insurace.name'|translate}}</label
             >
             <input
               formControlName="Name"
@@ -51,8 +51,8 @@
           </div>
           <div class="col-md-6 mb-3">
             <label for="validationServer01" class="font"
-              >البريد الالكترونى</label
-            >
+              >{{'insurace.mail'|translate}}</label
+            > 
             <input
               autofocus
               formControlName="Email"
@@ -87,7 +87,7 @@
         </div>
         <div class="form-row">
           <div class="col-md-4 mb-3">
-            <label for="validationServer01" class="font">رقم الموبايل</label>
+            <label for="validationServer01" class="font">{{'insurace.mobile'|translate}}</label>
             <input
               formControlName="Mobile"
               type="text"
@@ -140,37 +140,37 @@
     </mat-step>
     <mat-step [stepControl]="secondFormGroup">
       <form class="divInput" dir="rtl" [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>اضف مركبة</ng-template>
+        <ng-template matStepLabel>{{'insurace.add'|translate}}</ng-template>
         <div class="flexheader">
-          <h1>اضف مركبة</h1>
+          <h1>{{'insurace.add'|translate}}</h1>
         </div>
         <hr />
 
         <div class="form-row">
           <div class="col-md-3 mb-3 form-group">
-            <label for="TourID" class="font">الرقم التسلسلى للمركبة</label>
+            <label for="TourID" class="font">{{'insurace.serial'|translate}}</label>
 
             <input type="text" formControlName="id" class="form-control" />
           </div>
           <div class="col-md-3 mb-3 form-group">
-            <label class="font" for="Title">نوع ناقل الحركة</label>
+            <label class="font" for="Title">{{'insurace.type'|translate}}</label>
             <select class="form-control" formControlName="Title" id="Title">
-              <option>اوتوماتيكي</option>
-              <option>يدوي</option>
+              <option>{{'insurace.otom'|translate}}</option>
+              <option>{{'insurace.manual'|translate}}</option>
             </select>
           </div>
           <div class="col-md-3 mb-3 form-group">
-            <label class="font" for="Date">الغرض من الاستخدام</label>
+            <label class="font" for="Date">{{'insurace.use'|translate}}</label>
             <select class="form-control" formControlName="Date" id="Date">
-              <option>شخصى</option>
-              <option>اجرة</option>
-              <option>حمل</option>
-              <option>اخرى</option>
+              <option>{{'insurace.personal'|translate}}</option>
+              <option>{{'insurace.fare'|translate}}</option>
+              <option>{{'insurace.load'|translate}}</option>
+              <option>{{'insurace.other'|translate}}</option>
             </select>
           </div>
           <div class="col-md-3 mb-3 form-group">
             <label class="font" for="TourDistance"
-              >قيمة المركبة التقديرية</label
+              >{{'insurace.value'|translate}}</label
             >
 
             <input
@@ -185,7 +185,7 @@
 
         <div class="form-row">
           <div class="col-md-3 mb-3 form-group">
-            <label class="font" for="Image">سنة الصنع</label>
+            <label class="font" for="Image">{{'insurace.year'|translate}}</label>
             <select
               class="form-control selectpicker"
               title="Select your surfboard"
@@ -197,7 +197,7 @@
             </select>
           </div>
           <div class="col-md-3 mb-3 form-group">
-            <label class="font" for="Rate">نوع المركبة</label>
+            <label class="font" for="Rate">{{'insurace.typeof'|translate}}</label>
             <!-- <p-cascadeSelect class="form-control selectpicker" formControlName="Rate" [(ngModel)]="selectedCity1" [options]="countries" optionLabel="cname" optionGroupLabel="name"
                   [optionGroupChildren]="['states', 'cities']" [style]="{'minWidth': '14rem'}">
                 </p-cascadeSelect>
@@ -208,21 +208,21 @@
               formControlName="Rate"
             >
               <optgroup label="TOYOYA">
-                <option value=" Avalon">TOYOYA Avalon</option>
-                <option value=" Camry">TOYOYA Camry</option>
+                <option >TOYOYA Avalon</option>
+                <option >TOYOYA Camry</option>
 
-                <option value=" Prius">TOYOYA Prius</option>
-                <option value=" Yaris">TOYOYA Yaris</option>
+                <option >TOYOYA Prius</option>
+                <option >TOYOYA Yaris</option>
 
-                <option value=" 86">TOYOYA 86</option>
-                <option value=" Sienna">TOYOYA Sienna</option>
+                <option >TOYOYA 86</option>
+                <option>TOYOYA Sienna</option>
 
-                <option value=" C-HR">TOYOYA C-HR</option>
+                <option >TOYOYA C-HR</option>
 
-                <option value=" RAV4">TOYOYA RAV4</option>
+                <option >TOYOYA RAV4</option>
 
-                <option value=" Highlander">TOYOYA Highlander</option>
-                <option value=" 4Runner">TOYOYA 4Runner</option>
+                <option >TOYOYA Highlander</option>
+                <option >TOYOYA 4Runner</option>
 
                 <option>TOYOYA Tacoma</option>
                 <option>TOYOYA Tundra</option>
@@ -317,12 +317,12 @@
                 <option>Mazda CX-9</option>
               </optgroup>
               <optgroup label="VOLVO">
-                <option value="audi">VOLVO S90/V90</option>
-                <option value="audi">Volvo C40</option>
-                <option value="audi">VOLVO XC40</option>
-                <option value="audi">VOLVO C70</option>
-                <option value="audi">VOLVO XC90</option>
-                <option value="audi">VOLVO C30</option>
+                <option >VOLVO S90/V90</option>
+                <option >Volvo C40</option>
+                <option >VOLVO XC40</option>
+                <option >VOLVO C70</option>
+                <option >VOLVO XC90</option>
+                <option >VOLVO C30</option>
               </optgroup>
               <optgroup class="ss" label="Mitsubishi">
                 <option>Mitsubishi CROSS</option>
@@ -432,7 +432,7 @@
                 </select> -->
           </div>
           <div class="col-md-3 mb-3 form-group">
-            <label class="font" for="Review">لون المركبة</label>
+            <label class="font" for="Review">{{'insurace.color'|translate}}</label>
             <input
               type="text"
               class="form-control"
@@ -441,7 +441,7 @@
             />
           </div>
           <div class="col-md-3 mb-3 form-group">
-            <label class="font" for="TourBooked">رقم الشاصى للمركبة</label>
+            <label class="font" for="TourBooked">{{'insurace.shase'|translate}}</label>
 
             <input type="text" formControlName="Booked" class="form-control" />
           </div>
@@ -450,7 +450,7 @@
         <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ person \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
         <div class="form-row">
           <div class="col-md-3 mb-3 form-group">
-            <label class="font" for="Price">الحالة الاجتماعية</label>
+            <label class="font" for="Price">{{'insurace.status'|translate}}</label>
             <select
               class="form-control"
               formControlName="Price"
@@ -458,19 +458,41 @@
               name="sss"
               id="Price"
             >
-              <option>اعزب</option>
-              <option>متزوج</option>
+            <option>{{'insurace.single'|translate}}</option>
+              <option>{{'insurace.maried'|translate}}</option>
             </select>
           </div>
 
           <div class="col-md-3 mb-3 form-group" *ngIf="statuesshow == 'متزوج'">
-            <label class="font" for="Price">عدد الاطفال</label>
+            <label class="font" for="Price">{{'insurace.child'|translate}}</label>
 
             <select
               class="form-control"
               formControlName="noChiled"
               id="OldPrice"
             >
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+          <div class="col-md-3 mb-3 form-group" *ngIf="statuesshow == 'Married'">
+            <label class="font" for="Price">{{'insurace.child'|translate}}</label>
+
+            <select
+              class="form-control"
+              formControlName="noChiled"
+              id="OldPrice"
+            >
+              <option>0</option>
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -484,38 +506,38 @@
             </select>
           </div>
           <div class="col-md-3 mb-3 form-group">
-            <label class="font" for="TourOldPrice">المهنة</label>
+            <label class="font" for="TourOldPrice">{{'insurace.profession'|translate}}</label>
 
             <select
               class="form-control"
               formControlName="OldPrice"
               id="OldPrice"
             >
-              <option>قطاع حكومى</option>
-              <option>قطاع خاص</option>
-              <option>اعمال حرة</option>
-              <option>طالب</option>
-              <option>كاسب</option>
-              <option>لا يعمل</option>
+              <option>{{'insurace.gover'|translate}}</option>
+              <option>{{'insurace.private'|translate}}</option>
+              <option>{{'insurace.freelance'|translate}}</option>
+              <option>{{'insurace.student'|translate}}</option>
+              <option>{{'insurace.kasb'|translate}}</option>
+              <option>{{'insurace.notworking'|translate}}</option>
             </select>
           </div>
           <div class="col-md-3 mb-3 form-group">
-            <label class="font" for="gender">مالك السيارة </label>
+            <label class="font" for="gender">{{'insurace.owner'|translate}}</label>
             <select class="form-control" formControlName="gender" id="gender">
-              <option>ذكر</option>
-              <option>انثى</option>
+              <option>{{'insurace.male'|translate}}</option>
+              <option>{{'insurace.female'|translate}}</option>
             </select>
           </div>
           <div class="col-md-3 mb-3 form-group">
-            <label class="font" for="TourDiscount">نوع رخصة القيادة</label>
+            <label class="font" for="TourDiscount">{{'insurace.licence'|translate}}</label>
             <select
               class="form-control"
               formControlName="TourDiscount"
               id="TourDiscount"
             >
-              <option>خصوصي</option>
-              <option>عامة</option>
-              <option>أخرى</option>
+              <option>{{'insurace.priva'|translate}}</option>
+              <option>{{'insurace.general'|translate}}</option>
+              <option>{{'insurace.otheer'|translate}}</option>
             </select>
           </div>
         </div>
@@ -780,7 +802,7 @@
             <h3 class="boldfont">نوع التامين</h3>
             <h3 class="mr-5">{{ item.insurancetype }}</h3>
           </div>
-          <div class="flexdiv">
+          <div class="flexdiv"> 
             <h3 class="boldfont">اسم الفاتورة</h3>
             <h3 class="mr-5">تامينى</h3>
           </div>

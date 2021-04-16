@@ -4,15 +4,18 @@ import { SignComponent } from './../sign/sign.component';
 import { SignUpComponent } from './../sign-up/sign-up.component';
 import { LoginComponent } from '../login/login.component';
 import { SignauthService } from 'src/app/services/signauth.service';
+import { TranslateService } from '@ngx-translate/core';
+import { LangService } from 'src/app/services/lang.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
-})
+}) 
 export class HeaderComponent implements OnInit {
 
-  constructor(public dialog: MatDialog,private authser: SignauthService) {}
+  constructor(public dialog: MatDialog,private authser: SignauthService,  private languageService: LangService,
+    private translate: TranslateService,) {}
 
   openDialog() {
     const dialogRef = this.dialog.open(SignUpComponent,{
@@ -41,6 +44,14 @@ export class HeaderComponent implements OnInit {
     this.authser.logout()
     localStorage.removeItem('currentUserEmail')
 
+  }
+
+  changeLanguage() {
+    window.location.reload()
+    this.languageService.setLanguage(
+      this.languageService.getLanguage() == 'ar' ? 'en' : 'ar',
+    )
+    this.translate.use(this.languageService.getLanguage())
   }
 
 }

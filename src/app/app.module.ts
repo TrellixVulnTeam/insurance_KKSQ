@@ -42,10 +42,23 @@ import {DropdownModule} from 'primeng/dropdown';
 import {ButtonModule} from 'primeng/button';
 import {MatSelectModule} from '@angular/material/select';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import {NgxPrintModule} from 'ngx-print';
 import { AboutusComponent } from './Components/login/aboutus/aboutus.component';
 import { ContactComponent } from './Components/login/contact/contact.component';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {
+  TranslateModule, 
+  TranslateService,
+  TranslateLoader,
+} from '@ngx-translate/core';
 
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+}
 
 var firebaseConfig = {
   apiKey: "AIzaSyAzBJKDiRHQ0pgh52rSMCh_jvV5CBRwdCI",
@@ -100,7 +113,18 @@ var firebaseConfig = {
     CascadeSelectModule,
     DropdownModule,
     ButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    TranslateModule,
+    // TranslateService,
+    HttpClientModule,
+    TranslateModule.forRoot({ 
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+
+      },
+    }),
 
 
 
