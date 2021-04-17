@@ -97,24 +97,24 @@ yeararr:any[]=[]
 
     this.firstFormGroup = this._formBuilder.group({
       Email: new FormControl(localStorage.getItem("currentUserEmail"), [Validators.required,Validators.email]),
-      Name: new FormControl('', [Validators.required,Validators.minLength(5)]),
-      Mobile: new FormControl('', [Validators.required,Validators.minLength(5)]),
+      Name: new FormControl('dssssssssss', [Validators.required,Validators.minLength(5)]),
+      Mobile: new FormControl('dsssssssssss', [Validators.required,Validators.minLength(5)]),
     });
     this.secondFormGroup = this._formBuilder.group({
    
-      id:new FormControl('', Validators.required),
-        Booked:new FormControl('', Validators.required),
-        Date:new FormControl('', Validators.required)
-        ,Image:new FormControl('', Validators.required)
-        ,OldPrice:new FormControl('', Validators.required)
-        ,Price:new FormControl('', Validators.required)
-        ,Rate:new FormControl('', Validators.required)
-        ,Review:new FormControl('', Validators.required)
-        ,Section:new FormControl('', Validators.required)
-        ,Title:new FormControl('', Validators.required)
-        ,TourDiscount:new FormControl('', Validators.required)
-        ,noChiled:new FormControl('')
-        ,gender:new FormControl('', Validators.required)
+      id:new FormControl('d', Validators.required),
+        Booked:new FormControl('d', Validators.required),
+        Date:new FormControl('d', Validators.required)
+        ,Image:new FormControl('d', Validators.required)
+        ,OldPrice:new FormControl('d', Validators.required)
+        ,Price:new FormControl('d', Validators.required)
+        ,Rate:new FormControl('d', Validators.required)
+        ,Review:new FormControl('d', Validators.required)
+        ,Section:new FormControl('d', Validators.required)
+        ,Title:new FormControl('d', Validators.required)
+        ,TourDiscount:new FormControl('d', Validators.required)
+        ,noChiled:new FormControl('d')
+        ,gender:new FormControl('d', Validators.required)
   
   
   
@@ -338,7 +338,7 @@ datee(){
 
   
 
-  if(this.listaddforth.calender=='شهر' ){
+  if(this.listaddforth.calender=='شهر'||'1 month' ){
     console.log('1')
     
    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*1)));
@@ -358,7 +358,7 @@ datee(){
 
   }
 
-  else if(this.listaddforth.calender=='شهرين' ){
+  else if(this.listaddforth.calender=='شهرين' || '2 month' ){
     console.log('2yer')
     
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*2)));
@@ -376,7 +376,7 @@ datee(){
  console.log("price5",this.price5)
  
    }
-   else if(this.listaddforth.calender=='ثلاث شهور' ){
+   else if(this.listaddforth.calender=='ثلاث شهور' || '3 month' ){
     console.log('2yer')
     
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*3)));
@@ -395,7 +395,7 @@ datee(){
  console.log("price5",this.price5)
  
    }
-   else if(this.listaddforth.calender=='اربع شهور' ){
+   else if(this.listaddforth.calender=='اربع شهور' || '4 month'){
     console.log('4')
     
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*4)));
@@ -413,7 +413,7 @@ datee(){
  console.log("price4",this.price4)
  console.log("price5",this.price5)
  
-   } else if(this.listaddforth.calender=='خمس شهور' ){
+   } else if(this.listaddforth.calender=='خمس شهور' || '5 month' ){
     console.log('خمس')
     
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*5)));
@@ -431,7 +431,7 @@ datee(){
  console.log("price4",this.price4)
  console.log("price5",this.price5)
  
-   } else if(this.listaddforth.calender=='ست شهور' ){
+   } else if(this.listaddforth.calender=='ست شهور' || '6 month' ){
     console.log('6')
     
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*6)));
@@ -449,7 +449,7 @@ datee(){
  console.log("price4",this.price4)
  console.log("price5",this.price5)
  
-   } else if(this.listaddforth.calender=='سبع شهور' ){
+   } else if(this.listaddforth.calender=='سبع شهور' || '7 month'){
     console.log('7')
     
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*7)));
@@ -467,7 +467,7 @@ datee(){
  console.log("price4",this.price4)
  console.log("price5",this.price5)
  
-   } else if(this.listaddforth.calender=='ثمان شهور' ){
+   } else if(this.listaddforth.calender=='ثمان شهور' || '8 month'){
     console.log('2yer')
     
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*8)));
@@ -485,7 +485,7 @@ datee(){
  console.log("price4",this.price4)
  console.log("price5",this.price5)
  
-   } else if(this.listaddforth.calender=='تسعة شهور' ){
+   } else if(this.listaddforth.calender=='تسعة شهور' || '9 month' ){
     console.log('9')
     
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*9)));
@@ -504,7 +504,7 @@ datee(){
  console.log("price5",this.price5)
  
    } 
-   else if(this.listaddforth.calender=='عشرة شهور' ){
+   else if(this.listaddforth.calender=='عشرة شهور' || '10 month'){
     console.log('عشرة')
     
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*10)));
@@ -523,7 +523,7 @@ datee(){
  console.log("price5",this.price5)
  
    }
-   else if(this.listaddforth.calender=='احدى عشر شهر' ){
+   else if(this.listaddforth.calender=='احدى عشر شهر' || '11 month'){
     console.log('عشرة')
     
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*11)));
@@ -542,7 +542,7 @@ datee(){
  console.log("price5",this.price5)
  
    }
-   else if(this.listaddforth.calender=='سنة' ){
+   else if(this.listaddforth.calender=='سنة' ||'year' ){
     console.log('4yer')
     
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*12)));

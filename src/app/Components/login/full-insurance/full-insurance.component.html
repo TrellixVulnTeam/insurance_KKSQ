@@ -381,7 +381,7 @@
                 <option >Hyundai Elantra</option>
                 <option >Hyundai Grand i10 Nios</option>
                 <option >Hyundai Xcent Prime</option>
-              <option> Hyundai Starex</option> 
+                
 <option>Hyundai Sonata</option>
 <option>Hyundai Grandeur</option>
 <option>Hyundai Veracruz</option>
@@ -401,7 +401,6 @@
 <option>Hyundai Aero City</option>
 <option>Hyundai Excel</option>
 <option>Hyundai elantra</option>
-
               </optgroup>
               <!-- <optgroup label=" Land rover">
                 <option value="audi">Audi</option>
@@ -592,14 +591,14 @@
       <div></div>
     </mat-step>
     <mat-step>
-      <ng-template class="ng-template" matStepLabel>Done</ng-template>
+      <ng-template class="ng-template" matStepLabel>{{'insuracedoc.title'|translate}}</ng-template>
       <form class="divInput2" dir="rtl" [formGroup]="forthFormGroup">
         <div class="flexheader">
-          <h1>تاريخ بدء الوثيقة</h1>
+          <h1>{{'insuracedoc.title'|translate}}</h1>
         </div>
         <hr />
         <div class="flexdiv2">
-          <label class="font">متى تريد أن يبدأ تاريخ سريان الوثيقة ؟</label>
+          <label class="font">{{'insuracedoc.qustion'|translate}}</label>
           <br />
 
           <!-- <input type="date" [(ngModel)]="age" /> -->
@@ -617,27 +616,27 @@
           <br />
           <br />
 
-          <label class="font">{{ showAge | date: "yyyy-MM-dd" }}</label>
+          <!-- <label class="font">{{ showAge | date: "yyyy-MM-dd" }}</label> -->
           <div class="col-md-3 mb-3 form-group">
-            <label class="font" for="Title">اختيار مدة التأمين</label>
+            <label class="font" for="Title">{{'insuracedoc.choosemonth'|translate}}</label>
             <select
               class="form-control"
               formControlName="calender"
               [(ngModel)]="noyear"
               id="Title"
             >
-              <option>شهر</option>
-              <option>شهرين</option>
-              <option>ثلاث شهور</option>
-              <option>اربع شهور</option>
-              <option>خمس شهور</option>
-              <option>ست شهور</option>
-              <option>سبع شهور</option>
-              <option>ثمان شهور</option>
-              <option>تسعة شهور</option>
-              <option>عشرة شهور</option>
-              <option>احدى عشر شهر</option>
-              <option>سنة</option>
+              <option>{{'insuracedoc.mon1'|translate}}</option>
+              <option>{{'insuracedoc.mon2'|translate}}</option>
+              <option>{{'insuracedoc.mon3'|translate}}</option>
+              <option>{{'insuracedoc.mon4'|translate}}</option>
+              <option>{{'insuracedoc.mon5'|translate}}</option>
+              <option>{{'insuracedoc.mon6'|translate}}</option>
+              <option>{{'insuracedoc.mon7'|translate}}</option>
+              <option>{{'insuracedoc.mon8'|translate}}</option>
+              <option>{{'insuracedoc.mon9'|translate}}</option>
+              <option>{{'insuracedoc.mon10'|translate}}</option>
+              <option>{{'insuracedoc.mon11'|translate}}</option>
+              <option>{{'insuracedoc.mon12'|translate}}</option>
             </select>
           </div>
         </div>
@@ -674,14 +673,14 @@
     </mat-step>
     <mat-step>
       <form class="divInput" [formGroup]="thirdFormGroup" dir="rtl">
-        <ng-template matStepLabel>معلومات مالك الوثيقة</ng-template>
+        <ng-template matStepLabel>{{'insuracedoc.headform'|translate}}</ng-template>
         <div class="flexheader">
-          <h1>استكمل بيانات عنوانك الوطنى</h1>
+          <h1>{{'insuracedoc.addres'|translate}}</h1>
         </div>
         <hr />
         <div class="form-row">
           <div class="col-md-6 mb-3">
-            <label for="validationServer01" class="font">رقم الدار</label>
+            <label for="validationServer01" class="font">{{'insuracedoc.dar'|translate}}</label>
             <input
               formControlName="Name"
               type="text"
@@ -692,7 +691,7 @@
             />
           </div>
           <div class="col-md-6 mb-3">
-            <label for="validationServer01" class="font">القضاء</label>
+            <label for="validationServer01" class="font">{{'insuracedoc.kada'|translate}}</label>
             <input
               formControlName="Email"
               type="text"
@@ -705,27 +704,28 @@
         </div>
         <div class="form-row">
           <div class="col-md-4 mb-3">
-            <label for="validationServer01" class="font">المحافظة</label>
+            <label for="validationServer01" class="font">{{'insuracedoc.mohafza'|translate}}</label>
 
             <select class="form-control" formControlName="Mobile" id="Date">
-              <option>أربيل</option>
-              <option>كربلاء</option>
-              <option>ذي قار</option>
-              <option>صلاح الدين</option>
-              <option>بابل</option>
-              <option>بغداد</option>
-              <option>البصرة</option>
-              <option>دهوك</option>
-              <option>الأنبار</option>
-              <option>النجف</option>
-              <option>القادسية</option>
-              <option>السليمانية</option>
-              <option>واسط</option>
-              <option>ميسان</option>
-              <option>نينوى</option>
-              <option>كركوك</option>
-              <option>ديالى</option>
-              <option>دهوك</option>
+              <option>{{'insuracedoc.mohafza1'|translate}}</option>
+              <option>{{'insuracedoc.mohafza2'|translate}}</option>
+              <option>{{'insuracedoc.mohafza3'|translate}}</option>
+              <option>{{'insuracedoc.mohafza4'|translate}}</option>
+              <option>{{'insuracedoc.mohafza5'|translate}}</option>
+              <option>{{'insuracedoc.mohafza6'|translate}}</option>
+              <option>{{'insuracedoc.mohafza7'|translate}}</option>
+              <option>{{'insuracedoc.mohafza8'|translate}}</option>
+              <option>{{'insuracedoc.mohafza9'|translate}}</option>
+              <option>{{'insuracedoc.mohafza10'|translate}}</option>
+              <option>{{'insuracedoc.mohafza11'|translate}}</option>
+              <option>{{'insuracedoc.mohafza12'|translate}}</option>
+              <option>{{'insuracedoc.mohafza13'|translate}}</option>
+              <option>{{'insuracedoc.mohafza14'|translate}}</option>
+              <option>{{'insuracedoc.mohafza15'|translate}}</option>
+              <option>{{'insuracedoc.mohafza16'|translate}}</option>
+              <option>{{'insuracedoc.mohafza17'|translate}}</option>
+              <option>{{'insuracedoc.mohafza18'|translate}}</option>
+            
             </select>
           </div>
         </div>
@@ -815,7 +815,7 @@
         </div>
         <hr />
         <div class="titleinsurance">
-          <h1>تأمين شامل</h1>
+          <h1>تأمين  شامل</h1>
         </div>
         <div id="print-section" class="">
           <h2>الرجاء الاطلاع على تفاصيل فاتورة السداد</h2>

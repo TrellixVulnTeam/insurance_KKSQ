@@ -1,4 +1,24 @@
 {
+    "about":{
+        "title":"About Ibn al-Haytham company",
+        "welcome":"ًWelcome",
+        "details":"Iraqi general insurance company is one of the private finance companies belonging to a group of Iraqi businessmen and investors founded in 2010, and is one of the major Iraqi insurance companies that practice all types of insurance on cars (private insurance, insurance against third parties), the company is managed by an elite of the finest administrative, technical and financial personnel working in the field of insurance , , The company has been interested in marketing its insurance documents through banks, such as car insurance and various types , as the company can cover all small and large projects according to its financial properties and according to the ongoing reinsurance agreements with major companies . We would also like to note that the insurance premiums paid by them are considered tax permits when accounting tax and in tax that does not include salaries of employees and finally, the company always seeks to modernize its work and is distinguished in the field of Citizen Service and thus to protect the economy in general and the insurance sector in",
+        "comptitle":"Ibn al-Haytham insurance company, one of the Iraqi companies",
+        "compdetail":"Our company provides you with all insurance policies:.Insurance on cars and mechanisms against the dangers of collision, overturning, theft, fire and damage caused by the car to others",
+        "infotitle":"Company establishment",
+    "infodetails":"The company was established on 14/10/2010 on the basis of the Commercial Companies Act No. 31 of 1957 in Baghdad as a private company under the name of Ibn al-Haytham company, which practices all types of insurance and reinsurance, in 2010.also, in 2005, Law No. 10 on the regulation of insurance business was promulgated, according to which insurance companies operate in a free and competitive economy. the company aims to contribute to economic development by spreading insurance awareness among members of the community and the growth it achieves in the insurance policies marketed and the revenues generated therefrom.",
+    "condetails":"Our transactions are fast our procedures are simple .",
+    "relax":"Rest assured when you're cooperating with us.We have been working in the Iraqi market for more than 10 years, we have six geographical branches in Baghdad و and one branch in the center of each governorate .We have representatives who work at your service throughout the working hours and arrive at your workplace without the need for meager reviews"
+
+
+
+    },
+    "conect":{
+        "title":"Contact us",
+        "conecthead":"Contact us",
+        "mail":"Connect us by Email",
+        "toconnect":"To contact us please contact us on one of the following numbers"
+    },
     "insurace":{
         "mail":"Email",
         "name":"Name",
@@ -53,6 +73,47 @@
 
 
     },
+    "insuracedoc":{
+      "title":"Start date of the document",
+        "qustion":"When do you want the effective date of the document to start? ",
+        "choosemonth":" Choice of insurance term" ,
+        "mon1":"1 month",
+        "mon2":"2 month",
+        "mon3":"3 month",
+        "mon4":"4 month",
+        "mon5":"5 month",
+        "mon6":"6 month",
+        "mon7":"7 month",
+        "mon8":"8 month",
+        "mon9":"9 month",
+        "mon10":"10 month",
+        "mon11":"11 month",
+        "mon12":"year",
+        "headform":"Owner Information Document",
+        "addres":" Update your national address",
+     "dar":"House number",
+        "kada":"Elimination",
+        "mohafza":"Governorate",
+        "mohafza1":"Baghdad"
+,"mohafza2":"Dohuk"
+,"mohafza3":"Sulaymaniyah"
+,"mohafza4":"Kirkuk"
+,"mohafza5":"Salahuddin"
+,"mohafza6":"Diyala" 
+,"mohafza7":"Anbar",
+"mohafza8":"Babil"
+,"mohafza9":"Wasit"
+,"mohafza10":"Najaf"
+,"mohafza11":"Karbala"
+,"mohafza12":"Muthanna"
+,"mohafza13":"Maysan"
+,"mohafza14":"Qadissiya"
+,"mohafza15":"Basra"
+,"mohafza16":"Mosul"
+,"mohafza17":"Dhi Qar",
+"mohafza18":"Erbil"
+
+       },
     "shared": {
         "language": "en"
       }
