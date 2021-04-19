@@ -219,6 +219,12 @@ constructor(private _formBuilder: FormBuilder,public dialog: MatDialog,private i
     this.datee()
     this.Cards=[
       {
+        title:"شركة ابن الهيثم ",
+        NoDocument:this.price5,
+        Icon:"../../../../assets/hh.gif",
+        ColorBck:"card-header-primary"
+      },
+      {
       title:"شركة الانماء طوكيو",
       NoDocument:this.price1,
       Icon:"../../../../assets/ali.jpg",
@@ -242,12 +248,7 @@ constructor(private _formBuilder: FormBuilder,public dialog: MatDialog,private i
     Icon:"../../../../assets/dre.png",
     ColorBck:"card-header-info"
   },
-  {
-    title:"شركة ابن الهيثم ",
-    NoDocument:this.price5,
-    Icon:"../../../../assets/hh.gif",
-    ColorBck:"card-header-primary"
-  },
+
  
   
   ];

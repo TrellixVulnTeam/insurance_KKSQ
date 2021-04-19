@@ -21,7 +21,7 @@
     },
     "insurace":{
         "mail":"Email",
-        "name":"Name",
+        "name":"Student Name (Insurance)",
         "mobile":"Mobile",
         "title":"Registered identities",
         "serial":"Vehicle serial number",
@@ -35,7 +35,7 @@
         "fare":"Fare",
         "load":"Load",
         "other":"other",
-        "value":"Estimated vehicle value",
+        "value":"Estimated vehicle value ($)",
         "year":"Year of manufacture",
         "typeof":"Vehicle type",
         "color":"Vehicle color",
