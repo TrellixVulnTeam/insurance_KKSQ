@@ -19,8 +19,8 @@ export class LoginComponent implements OnInit {
     public dialog: MatDialog,    private authSer: SignauthService,
     ) {
     this.userInfo = this._formBuilder.group({
-      Email: new FormControl('d@gd', [Validators.required,Validators.email]),
-      Password: new FormControl('123456789123', [Validators.required,Validators.minLength(5)]),
+      Email: new FormControl('', [Validators.required,Validators.email]),
+      Password: new FormControl('', [Validators.required,Validators.minLength(5)]),
     });
   
   }
