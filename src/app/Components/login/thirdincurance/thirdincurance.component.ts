@@ -102,19 +102,19 @@ yeararr:any[]=[]
     });
     this.secondFormGroup = this._formBuilder.group({
    
-      id:new FormControl('', Validators.required),
-        Booked:new FormControl('', Validators.required),
-        Date:new FormControl('', Validators.required)
-        ,Image:new FormControl('', Validators.required)
-        ,OldPrice:new FormControl('', Validators.required)
-        ,Price:new FormControl('', Validators.required)
-        ,Rate:new FormControl('', Validators.required)
-        ,Review:new FormControl('', Validators.required)
-        ,Section:new FormControl('', Validators.required)
-        ,Title:new FormControl('', Validators.required)
-        ,TourDiscount:new FormControl('', Validators.required)
+      id:new FormControl('ddd', Validators.required),
+        Booked:new FormControl('ddd', Validators.required),
+        Date:new FormControl('ddd', Validators.required)
+        ,Image:new FormControl('ddd', Validators.required)
+        ,OldPrice:new FormControl('ddd', Validators.required)
+        ,Price:new FormControl('ddd', Validators.required)
+        ,Rate:new FormControl('ddd', Validators.required)
+        ,Review:new FormControl('ddd', Validators.required)
+        ,Section:new FormControl('ddd', Validators.required)
+        ,Title:new FormControl('ddd', Validators.required)
+        ,TourDiscount:new FormControl('ddd', Validators.required)
         ,noChiled:new FormControl('')
-        ,gender:new FormControl('', Validators.required)
+        ,gender:new FormControl('ddd', Validators.required)
   
   
   
@@ -226,7 +226,7 @@ yeararr:any[]=[]
       {
         title:"شركة ابن الهيثم ",
         NoDocument:this.price5,
-        Icon:"../../../../assets/hh.gif",
+        Icon:"../../../../assets/ibn.jpg",
         ColorBck:"card-header-primary"
       },
       {
