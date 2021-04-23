@@ -783,9 +783,9 @@
       </form>
     </mat-step>
     <mat-step>
-      <ng-template matStepLabel>الشركات</ng-template>
+      <ng-template matStepLabel>{{'company.title'|translate}}</ng-template>
       <div class="flexheader">
-        <h1>اختيار الشركة</h1>
+        <h1>{{'company.toptitle'|translate}}</h1>
       </div>
       <div class="content">
         <div class="container-fluid">
@@ -813,7 +813,7 @@
                       class="ml-4 btn btn-lg btn-success"
                       (click)="addInfo(c.NoDocument, c.Icon, c.title)"
                     >
-                      اختيار
+                    {{'company.btnChoose'|translate}}
                     </button>
                     <!-- <button mat-button  class="btn btn-lg btn-primary mr-4" (click)="resetform(thirdFormGroup)">Reset</button> -->
                   </div>
@@ -834,71 +834,71 @@
     </mat-step>
 
     <mat-step>
-      <ng-template matStepLabel>فاتورة</ng-template>
+      <ng-template matStepLabel>{{'bill.top'|translate}}</ng-template>
       <div class="divInput" dir="rtl">
         <div class="flexheader">
-          <h1 class="bckfont">شكرا لاختيارك عرض السعر لمركبتك</h1>
+          <h1 class="bckfont">{{'bill.thank'|translate}}</h1>
         </div>
         <hr />
         <div class="titleinsurance">
-          <h1>تأمين شامل</h1>
+          <h1>{{'bill.shamel'|translate}}</h1>
         </div>
         <div id="print-section" class="">
-          <h2>الرجاء الاطلاع على تفاصيل فاتورة السداد</h2>
+          <h2>{{'bill.please'|translate}}</h2>
           <div class="flexdiv">
-            <h3 class="boldfont">نوع التامين</h3>
-            <h3 class="mr-5">{{ item.insurancetype }}</h3>
+            <h3 class="boldfont">{{'bill.type'|translate}}</h3>
+            <h3 class="mr-5">{{'bill.shamel'|translate}}</h3>
           </div>
           <div class="flexdiv"> 
-            <h3 class="boldfont">اسم الفاتورة</h3>
-            <h3 class="mr-5">تامينى</h3>
+            <h3 class="boldfont">{{'bill.name'|translate}}</h3>
+            <h3 class="mr-5">{{'bill.tameni'|translate}}</h3>
           </div>
           <div class="flexdiv">
-            <h3 class="boldfont">رقم الفاتورة</h3>
+            <h3 class="boldfont">{{'bill.number'|translate}}</h3>
             <h3 class="mr-5">{{ random }}</h3>
           </div>
           <div class="flexdiv">
-            <h3 class="boldfont">قيمة التأمين</h3>
+            <h3 class="boldfont">{{'bill.quntity'|translate}}</h3>
             <h3 class="mr-5">${{ item.NoDocument }}</h3>
           </div>
 
-          <h2>معلومات المالك والمركبة</h2>
+          <h2>{{'bill.info'|translate}}</h2>
           <hr />
 
           <div class="flexdiv">
             <div>
               <div class="flexdiv">
-                <h3 class="boldfont">اسم مالك التامين</h3>
+                <h3 class="boldfont">{{'bill.nameper'|translate}}</h3>
                 <h3 class="mr-5">{{ item.Name }}</h3>
               </div>
 
               <div class="flexdiv">
-                <h3 class="boldfont">رقم الموبايل</h3>
+                <h3 class="boldfont">{{'bill.mobile'|translate}}</h3>
                 <h3 class="mr-5">{{ item.Mobile }}</h3>
               </div>
 
               <div class="flexdiv">
-                <h3 class="boldfont">البريد الالكتروني</h3>
+                <h3 class="boldfont">{{'bill.mail'|translate}}</h3>
                 <h3 class="mr-5">{{ item.Email }}</h3>
               </div>
             </div>
 
             <div class="mr-5">
               <div class="flexdiv">
-                <h3 class="boldfont">الرقم التسلسلى</h3>
+                <h3 class="boldfont">{{'bill.tasalsol'|translate}}</h3>
                 <h3 class="mr-5">{{ item.serialNumber }}</h3>
               </div>
               <div class="flexdiv">
-                <h3 class="boldfont">تاريخ البدء</h3>
+                <h3 class="boldfont">{{'bill.date'|translate}}</h3>
                 <h3 class="mr-5">{{ dateOfBirth | date: "mediumDate" }}</h3>
               </div>
 
               <div class="flexdiv">
-                <h3 class="boldfont">تاريخ الانتهاء</h3>
+                <h3 class="boldfont">{{'bill.dateend'|translate}}</h3>
                 <h3 class="mr-5">{{ showAge | date: "mediumDate" }}</h3>
               </div>
               <div class="flexdiv">
-                <h3 class="boldfont">نوع المركبة</h3>
+                <h3 class="boldfont">{{'bill.vechtype'|translate}}</h3>
                 <h3 class="mr-5">{{ item.carType }}</h3>
               </div>
             </div>

@@ -84,105 +84,105 @@ items: SelectItem[]=[];
 
 itemm: string='';
 yeararr:any[]=[]
-constructor(private _formBuilder: FormBuilder,public dialog: MatDialog,private insSer:AddInsuranceService,private languageService: LangService,
-  private translate: TranslateService,) { 
+  constructor(private _formBuilder: FormBuilder,public dialog: MatDialog,private insSer:AddInsuranceService,private languageService: LangService,
+    private translate: TranslateService,) { 
 
-    this.translate.use(languageService.getLanguage());
-
-
-  this.firstFormGroup = this._formBuilder.group({
-    Email: new FormControl(localStorage.getItem("currentUserEmail"), [Validators.required,Validators.email]),
-    Name: new FormControl('', [Validators.required,Validators.minLength(5)]),
-    Mobile: new FormControl('', [Validators.required,Validators.minLength(5)]),
-  });
-  this.secondFormGroup = this._formBuilder.group({
- 
-    id:new FormControl('', Validators.required),
-      Booked:new FormControl('', Validators.required),
-      Date:new FormControl('', Validators.required)
-      ,Image:new FormControl('', Validators.required)
-      ,OldPrice:new FormControl('', Validators.required)
-      ,Price:new FormControl('', Validators.required)
-      ,Rate:new FormControl('', Validators.required)
-      ,Review:new FormControl('', Validators.required)
-      ,Section:new FormControl('', Validators.required)
-      ,Title:new FormControl('', Validators.required)
-      ,TourDiscount:new FormControl('', Validators.required)
-      ,noChiled:new FormControl('')
-      ,gender:new FormControl('', Validators.required)
+      this.translate.use(languageService.getLanguage());
 
 
-
-    });
-    this.thirdFormGroup = this._formBuilder.group({
-      Email: new FormControl('', [Validators.required,Validators.email]),
+    this.firstFormGroup = this._formBuilder.group({
+      Email: new FormControl(localStorage.getItem("currentUserEmail"), [Validators.required,Validators.email]),
       Name: new FormControl('', [Validators.required,Validators.minLength(5)]),
-      Mobile: new FormControl('', Validators.required),
+      Mobile: new FormControl('', [Validators.required,Validators.minLength(5)]),
     });
-
-    this.forthFormGroup = this._formBuilder.group({
-     
-      calender: new FormControl('', Validators.required),
-      date: new FormControl('', Validators.required)
-    });
-
-  
-    this.yeararr=[ 
-      {no:1970},
-      {no:1971},
-      {no:1972},
-      {no:1973},
-      {no:1974},
-      {no:1975},
-      {no:1976},
-      {no:1977},
-      {no:1978},
-      {no:1979},
-      {no:1980},
-      {no:1981},
-      {no:1982},
-      {no:1983},
-      {no:1984},
-      {no:1985},
-      {no:1986},
-      {no:1987},
-      {no:1988},
-      {no:1989},
-      {no:1990},
-      {no:1991},
-      {no:1992},
-      {no:1993},
-      {no:1994},
-      {no:1995},
-      {no:1996},
-      {no:1997},
-      {no:1998},
-      {no:1999},
-      {no:2001},
-      {no:2002},
-      {no:2003},
-      {no:2004},
-      {no:2005},
-      {no:2006},
-      {no:2007},
-      {no:2008},
-      {no:2009},
-      {no:2010},
-      {no:2011},
-      {no:2012},
-      {no:2013},
-      {no:2014},
-      {no:2015},
-      {no:2016},
-      {no:2017},
-      {no:2018},
-      {no:2019},
-      {no:2020},
-      {no:2021},
+    this.secondFormGroup = this._formBuilder.group({
    
+      id:new FormControl('ssss', Validators.required),
+        Booked:new FormControl('ssss', Validators.required),
+        Date:new FormControl('ssss', Validators.required)
+        ,Image:new FormControl('ssss', Validators.required)
+        ,OldPrice:new FormControl('ssss', Validators.required)
+        ,Price:new FormControl('ssss', Validators.required)
+        ,Rate:new FormControl('ssss', Validators.required)
+        ,Review:new FormControl('ssss', Validators.required)
+        ,Section:new FormControl('ssss', Validators.required)
+        ,Title:new FormControl('ssss', Validators.required)
+        ,TourDiscount:new FormControl('ssss', Validators.required)
+        ,noChiled:new FormControl('')
+        ,gender:new FormControl('ssss', Validators.required)
+  
+  
+  
+      });
+      this.thirdFormGroup = this._formBuilder.group({
+        Email: new FormControl('', [Validators.required,Validators.email]),
+        Name: new FormControl('', [Validators.required,Validators.minLength(5)]),
+        Mobile: new FormControl('', Validators.required),
+      });
 
-    ]
-  }
+      this.forthFormGroup = this._formBuilder.group({
+       
+        calender: new FormControl('', Validators.required),
+        date: new FormControl('', Validators.required)
+      });
+
+    
+      this.yeararr=[ 
+        {no:1970},
+        {no:1971},
+        {no:1972},
+        {no:1973},
+        {no:1974},
+        {no:1975},
+        {no:1976},
+        {no:1977},
+        {no:1978},
+        {no:1979},
+        {no:1980},
+        {no:1981},
+        {no:1982},
+        {no:1983},
+        {no:1984},
+        {no:1985},
+        {no:1986},
+        {no:1987},
+        {no:1988},
+        {no:1989},
+        {no:1990},
+        {no:1991},
+        {no:1992},
+        {no:1993},
+        {no:1994},
+        {no:1995},
+        {no:1996},
+        {no:1997},
+        {no:1998},
+        {no:1999},
+        {no:2001},
+        {no:2002},
+        {no:2003},
+        {no:2004},
+        {no:2005},
+        {no:2006},
+        {no:2007},
+        {no:2008},
+        {no:2009},
+        {no:2010},
+        {no:2011},
+        {no:2012},
+        {no:2013},
+        {no:2014},
+        {no:2015},
+        {no:2016},
+        {no:2017},
+        {no:2018},
+        {no:2019},
+        {no:2020},
+        {no:2021},
+     
+
+      ]
+    }
 
     
   //  ngOnChanges(changes: SimpleChanges): void {
@@ -309,7 +309,7 @@ this.item.elmohafza=this.listaddthird.Mobile
 this.item.date=this.dateOfBirth
 this.item.currentdate=this.today.toString()
 
-this.item.insurancetype="تأمين  شامل"
+this.item.insurancetype="تأمين شامل"
 console.log(this.item)
 
   this.insSer.addInsurance(this.item)
@@ -319,7 +319,6 @@ printPage() {
 }
 showAge:number=0
 showAge2:number=0
-
 datee(){
   this.listaddforth=this.forthFormGroup.value
   
@@ -332,8 +331,7 @@ datee(){
   
   this.showAge2=this.showAge
 
-  
-
+  console.log(this.listaddforth.calender)
   if(this.listaddforth.calender=='شهر' ){
     console.log('1')
     
@@ -539,6 +537,231 @@ datee(){
  
    }
    else if(this.listaddforth.calender=='سنة' ){
+    console.log('4yer')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*12)));
+    this.showAge2=this.showAge
+    this.price1= this.price*0.50
+    this.price2=this.price*0.35
+   this.price3=this.price*0.41
+   this.price4=this.price*0.47
+ this.price5=this.price*0.30
+
+  
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   }
+
+  else if(this.listaddforth.calender=='1 month' ){
+    console.log('1')
+    
+   this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*1)));
+   this.showAge2=this.showAge
+   
+  this.price1= this.price*0.05
+   this.price2=this.price*0.03
+  this.price3=this.price*0.04
+  this.price4=this.price*0.06
+  this.price5=this.price*0.03
+  console.log("price1",this.price1)
+  console.log("price2",this.price2)
+  console.log("price3",this.price3)
+  console.log("price4",this.price4)
+  console.log("price5",this.price5)
+ 
+
+  }
+
+  else if(this.listaddforth.calender== '2 month' ){
+    console.log('2yer')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*2)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.1
+  this.price2=this.price*0.06
+ this.price3=this.price*0.08
+ this.price4=this.price*0.12
+ this.price5=this.price*0.06
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   }
+   else if(this.listaddforth.calender== '3 month' ){
+    console.log('2yer')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*3)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.13
+  this.price2=this.price*0.09
+ this.price3=this.price*0.11
+ this.price4=this.price*0.13
+ this.price5=this.price*0.08
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   }
+   else if(this.listaddforth.calender== '4 month'){
+    console.log('4')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*4)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.18
+  this.price2=this.price*0.12
+ this.price3=this.price*0.15
+ this.price4=this.price*0.19
+ this.price5=this.price*0.11
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   } else if(this.listaddforth.calender=='5 month' ){
+    console.log('خمس')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*5)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.21
+  this.price2=this.price*0.15
+ this.price3=this.price*0.18
+ this.price4=this.price*0.20
+ this.price5=this.price*0.13
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   } else if(this.listaddforth.calender=='6 month' ){
+    console.log('6')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*6)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.26
+  this.price2=this.price*0.18
+ this.price3=this.price*0.22
+ this.price4=this.price*0.26
+ this.price5=this.price*0.16
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   } else if(this.listaddforth.calender== '7 month'){
+    console.log('7')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*7)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.29
+  this.price2=this.price*0.21
+ this.price3=this.price*0.24
+ this.price4=this.price*0.27
+ this.price5=this.price*0.18
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   } else if(this.listaddforth.calender== '8 month'){
+    console.log('2yer')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*8)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.34
+  this.price2=this.price*0.24
+ this.price3=this.price*0.28
+ this.price4=this.price*0.33
+ this.price5=this.price*0.21
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   } else if(this.listaddforth.calender=='9 month' ){
+    console.log('9')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*9)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.37
+  this.price2=this.price*0.27
+ this.price3=this.price*0.30
+ this.price4=this.price*0.34
+ this.price5=this.price*0.23
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   } 
+   else if(this.listaddforth.calender== '10 month'){
+    console.log('عشرة')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*10)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.42
+  this.price2=this.price*0.29
+ this.price3=this.price*0.34
+ this.price4=this.price*0.40
+ this.price5=this.price*0.26
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   }
+   else if(this.listaddforth.calender==  '11 month'){
+    console.log('عشرة')
+    
+    this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*11)));
+    this.showAge2=this.showAge
+     
+  this.price1= this.price*0.45
+  this.price2=this.price*0.32
+ this.price3=this.price*0.37
+ this.price4=this.price*0.41
+ this.price5=this.price*0.28
+
+ console.log("price1",this.price1)
+  console.log("price2",this.price2)
+ console.log("price3",this.price3)
+ console.log("price4",this.price4)
+ console.log("price5",this.price5)
+ 
+   }
+   else if(this.listaddforth.calender=='year' ){
     console.log('4yer')
     
     this.showAge = Math.floor((timeDiff + ((1000 * 3600 * 24)*31*12)));
