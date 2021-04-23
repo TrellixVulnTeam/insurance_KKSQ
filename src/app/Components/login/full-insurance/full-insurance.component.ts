@@ -97,19 +97,19 @@ yeararr:any[]=[]
     });
     this.secondFormGroup = this._formBuilder.group({
    
-      id:new FormControl('ssss', Validators.required),
-        Booked:new FormControl('ssss', Validators.required),
-        Date:new FormControl('ssss', Validators.required)
-        ,Image:new FormControl('ssss', Validators.required)
-        ,OldPrice:new FormControl('ssss', Validators.required)
-        ,Price:new FormControl('ssss', Validators.required)
-        ,Rate:new FormControl('ssss', Validators.required)
-        ,Review:new FormControl('ssss', Validators.required)
-        ,Section:new FormControl('ssss', Validators.required)
-        ,Title:new FormControl('ssss', Validators.required)
-        ,TourDiscount:new FormControl('ssss', Validators.required)
+      id:new FormControl('', Validators.required),
+        Booked:new FormControl('', Validators.required),
+        Date:new FormControl('', Validators.required)
+        ,Image:new FormControl('', Validators.required)
+        ,OldPrice:new FormControl('', Validators.required)
+        ,Price:new FormControl('', Validators.required)
+        ,Rate:new FormControl('', Validators.required)
+        ,Review:new FormControl('', Validators.required)
+        ,Section:new FormControl('', Validators.required)
+        ,Title:new FormControl('', Validators.required)
+        ,TourDiscount:new FormControl('', Validators.required)
         ,noChiled:new FormControl('')
-        ,gender:new FormControl('ssss', Validators.required)
+        ,gender:new FormControl('', Validators.required)
   
   
   
