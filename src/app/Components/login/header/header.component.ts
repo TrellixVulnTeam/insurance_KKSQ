@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(public dialog: MatDialog,private authser: SignauthService,  private languageService: LangService,
     private translate: TranslateService,) {}
-
+    // "UU%\_%b2p=z:G#
   openDialog() {
     const dialogRef = this.dialog.open(SignUpComponent,{
       // width:'250px'
