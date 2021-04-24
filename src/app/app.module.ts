@@ -4,14 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { DashbordMainComponent } from './Components/login/dashbord-main/dashbord-main.component';
 import { SignComponent } from './Components/login/sign/sign.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
-import { NavcontrolDispalyDirective } from './directive/navcontrol-dispaly.directive';
 import { NotFoundComponent } from './Components/login/not-found/not-found.component';
-import { AMlistComponent } from './Lists/amlist/amlist.component';
-import { PMlistComponent } from './Lists/pmlist/pmlist.component';
+
 import { HomeComponent } from './Components/login/home/home.component';
 
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -28,12 +25,10 @@ import { LoginComponent } from './Components/login/login/login.component';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { SidenavComponent } from './sidenav/sidenav.component';
 
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {  MatInputModule } from '@angular/material/input';
-import { InfoDialogComponent } from './info-dialog/info-dialog.component';
 import { ThirdincuranceComponent } from './Components/login/thirdincurance/thirdincurance.component';
 
 import {MatMenuModule} from '@angular/material/menu';
@@ -73,19 +68,13 @@ var firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    DashbordMainComponent,
     SignComponent,
-    NavcontrolDispalyDirective,
     NotFoundComponent,
-    AMlistComponent,
-    PMlistComponent,
     HomeComponent,
     FullInsuranceComponent,
     HeaderComponent,
     SignUpComponent,
     LoginComponent,
-    SidenavComponent,
-    InfoDialogComponent,
     ThirdincuranceComponent,
     AboutusComponent,
     ContactComponent

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatStepper } from '@angular/material/stepper';
-import { InfoDialogComponent } from 'src/app/info-dialog/info-dialog.component';
 import { AddInsuranceService } from 'src/app/services/add-insurance.service';
 import { ICardsDash } from 'src/app/ViewModals/icards-dash';
 import { Form2 } from './../../../ViewModals/form2';
@@ -194,14 +193,11 @@ yeararr:any[]=[]
        
     }
 
-  openDialog() {
-    const dialogRef = this.dialog.open(InfoDialogComponent,{
-      // width:'250px'
-    });
-
-
- 
-  }
+  // openDialog() {
+  //   const dialogRef = this.dialog.open(InfoDialogComponent,{
+  //     // width:'250px'
+  //   });
+  // }
   firstNext(){
     console.log(this.firstFormGroup.value)
     this.listaddfirst=this.firstFormGroup.value
