@@ -63,7 +63,6 @@ h2{
    
     margin: 82% 1%;
 }
-
 h1{
   font-size: 22px;
 }
@@ -73,14 +72,41 @@ h2{
 }
 
 button{
-  width: 150px !important;
-  height: 60px !important;
-  font-size: 17px;
+  width: 200px;
+  height: 70px;
+  font-size: 20px;
   font-weight: bold;
-  // color: rebeccapurple;
 
 
 }
+
+}
+
+@media (max-width:468px) {
+  button{
+    width: 150% !important;
+    height: 60px !important;
+    font-size: 15px !important;
+    // font-weight: bold;
+    
+    // color: rebeccapurple;
+  
+  }
+  .flexx{
+    flex-direction:row !important;
+    justify-content: space-around !important;
+    
+  }
+
+h1{
+  font-size: 100%;
+}
+
+h2{
+  font-size: 90%;
+}
+
+
 }
 .mm{
   margin-bottom: 20px !important;
@@ -102,4 +128,11 @@ header {
   background-size: cover;
   background-position: center center;
   position: relative;
+}
+
+.flexx{
+  display: flex;
+  flex-direction:column;
+  width: 180%;
+
 }
