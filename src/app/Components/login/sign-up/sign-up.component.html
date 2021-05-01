@@ -1,11 +1,11 @@
 <div class="divAll row">
   <div class="col-8 col-sm-12 col-md-6 col-lg-8 col-xs-12">
-    <h1>إنشاء حساب جديد</h1>
+    <h1>{{'sign.head'|translate}}</h1>
     <br />
     <div class="divInput">
       <form [formGroup]="userInfo">
         <div class="form-group">
-          <label class="font">الايميل</label>
+          <label class="font">{{'sign.mail'|translate}}</label>
           <input type="email" class="form-control" formControlName="Email" />
         </div>
         <div
@@ -29,7 +29,7 @@
         </div>
 
         <div class="form-group">
-          <label class="font">رقم الموبيل</label>
+          <label class="font">{{'sign.mob'|translate}}</label>
           <input type="tel" class="form-control" formControlName="mobile" />
         </div>
         <div
@@ -60,7 +60,7 @@
         </div>
 
         <div class="form-group">
-          <label class="font">كلمة السر</label>
+          <label class="font">{{'sign.pass'|translate}}</label>
           <input
             type="Password"
             class="form-control"
@@ -91,7 +91,7 @@
             
         <input type="submit" value="SignUp" class="btn btn-info btn-lg" (click)="onNoClick()" />
         <div class="divacc">
-            <a (click)="hasacc()">لديك حساب</a>
+            <a (click)="hasacc()">{{'sign.have'|translate}}</a>
         </div>
     </div>
       </form>

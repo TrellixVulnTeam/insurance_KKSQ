@@ -125,6 +125,19 @@
   "home":{
     "title":"Car Insurance"
 },
+"sign":{
+  "head":"Create new account",
+  "mail":"Email",
+  "mob":"Phone Number",
+  "pass":"Password",
+  "have":"Already have an account",
+  "loghead":"Login to your account"
+
+
+
+
+  
+},
   "shared": {
     "language": "en"
   }
